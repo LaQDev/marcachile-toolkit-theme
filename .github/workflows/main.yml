@@ -1,0 +1,24 @@
+name: Deploy Theme to Preproduction
+
+on:
+  push:
+    branches:
+      - main  # Se activa cada vez que subes cambios a la rama principal
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Obtener código del repositorio
+        uses: actions/checkout@v3
+
+      - name: 🚀 Subir archivos al servidor por SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.SFTP_SERVER }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: sftp
+          port: 22
+          # RUTA EN EL SERVIDOR (Ajustar si el nombre de la carpeta del theme es distinto)
+          server-dir: /home/dh_4wwubs/toolkitmarcachile.laq.cl/wp-content/themes/marcachile-toolkit-theme/

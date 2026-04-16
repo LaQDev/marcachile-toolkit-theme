@@ -1,0 +1,73 @@
+// Desktop
+.marca-chile-tabs {
+    padding-top: 1rem;
+    .nav {
+        .nav-item {
+            flex: 1 0 0%;
+            .nav-link {
+                font-size: 1.6rem;
+                line-height: inherit;
+                text-align: center;
+                width: 100%;
+                color: $marca-chile-color-red;
+                border-radius: 0;
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+                &.active{
+                    color: $marca-chile-color-red;
+                    background-color: transparent;
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid $marca-chile-color-red;
+                }
+            }
+            a.nav-link{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;                
+                height: 100%;
+                color: $marca-chile-color-white;
+                background-color: $marca-chile-color-red;
+                border: 2px solid $marca-chile-color-red;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    display: flex;
+                    border: 3px solid $marca-chile-color-white;
+                    width: 100%;
+                    height: 100%;
+                }                
+            }
+        }
+    }
+    .tab-content{
+        text-align: center;
+        padding: 6.4rem 0 10rem;
+        .tab-pane {
+            max-width: 46%;
+            margin: auto;
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-tabs{
+        .nav {
+            .nav-item {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+
+        .tab-content {
+            .tab-pane {
+                max-width: 100%;
+            }
+        }
+        
+    }
+}

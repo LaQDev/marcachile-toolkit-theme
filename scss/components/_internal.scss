@@ -1,0 +1,515 @@
+// ============================================================
+// Internal Pages – Toolkit Private Views
+// Search bar, media overlays, download buttons, breadcrumb,
+// photo modal, card-grid fixes, and responsive adjustments.
+// ============================================================
+
+
+// ── Breadcrumb / Pathway ──────────────────────────────────────
+
+.pathway {
+  font-family: $font-primary-light;
+  font-size: 1.4rem;
+  color: rgba($color-white, 0.7);
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 3;
+
+  strong {
+    font-family: $font-primary-bold;
+    color: $color-white;
+  }
+}
+
+
+// ── Toolkit Search Bar ────────────────────────────────────────
+
+.toolkit-search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: $spacing-base;
+
+  &__label {
+    color: var(--gris-500);
+    font-family: $font-primary;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  &__input {
+    flex: 1;
+    font-family: $font-primary-light;
+    font-size: $font-size-base;
+    color: $color-grey;
+    background: var(--gris-50);
+    border: none;
+    outline: none;
+    padding: $spacing-16;
+    border-radius: $border-radius-sm;
+
+    &::placeholder {
+      font-family: $font-primary-light;
+      color: $color-beige-medium;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background-color: var(--rojo-500);
+    border: none;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--rojo-600);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}
+
+
+// ── Media Wrapper (video / image preview) ─────────────────────
+
+.media-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  background-color: $color-beige;
+
+  video.video-item {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  picture.foto-thumbnail {
+    display: flex;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+
+// ── Media Overlay (play / zoom icons) ─────────────────────────
+
+.media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  transition: $transition-base;
+
+  img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+
+  // Play button overlay for videos
+  &.play-btn {
+    background: rgba($color-black, 0.25);
+
+    &:hover {
+      background: rgba($color-black, 0.4);
+    }
+  }
+
+  // Zoom / lupa overlay for images – always visible
+  &.zoom-btn {
+    background: rgba($color-black, 0.15);
+    opacity: 0.5;
+    transition: opacity 0.3s ease, background 0.3s ease;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Show zoom overlay fully on card hover
+.marca-chile-card-toolkit-foto:hover .media-overlay.zoom-btn {
+  opacity: 1;
+  background: rgba($color-black, 0.35);
+}
+
+
+// ── Tag Labels (foto-ico repurposed as taxonomy tags) ─────────
+
+.marca-chile-card-toolkit-foto > picture.foto-ico {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  width: auto;
+  height: auto;
+  right: auto;
+  bottom: auto;
+  padding: 0;
+
+  span {
+    display: inline-block;
+    font-family: $font-primary-bold;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #FFF;
+    background: var(--azul-500);
+    padding: 0.4rem 1.6rem;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+}
+
+
+// ── Download Button ───────────────────────────────────────────
+
+.btn-descarga {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: $font-primary-bold;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  color: #FFF;
+  background: var(--rojo-500);
+  border: none;
+  border-radius: $border-radius-md;
+  padding: 1.2rem 2.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--rojo-600);
+  }
+
+  img,
+  svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}
+
+// "Ver más" link next to download
+.foto-link-descarga {
+  .previsualizar {
+    display: inline-flex;
+    align-items: center;
+    font-family: $font-primary-light;
+    font-size: 1.2rem;
+    color: $color-blue;
+    text-decoration: underline;
+    margin-top: $spacing-sm;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+}
+
+
+// ── Photo Modal ───────────────────────────────────────────────
+
+.marca-chile-card-toolkit-foto-modal {
+  text-align: center;
+
+  picture.foto-modal {
+    display: block;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius-md;
+    }
+  }
+}
+
+// Modal content adjustments
+.modal {
+  .modal-dialog-centered {
+    .modal-content {
+      border: none;
+      border-radius: $border-radius-md;
+      overflow: hidden;
+
+      .modal-header {
+        border-bottom: none;
+        padding: 1rem 1.5rem;
+
+        .btn-close {
+          opacity: 0.7;
+          transition: opacity 0.2s ease;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .modal-body {
+        padding: 0 1.5rem 1.5rem;
+      }
+    }
+  }
+}
+
+
+// ── Card Grid Layout Fixes ────────────────────────────────────
+
+#content_category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $spacing-base 0;
+}
+
+.marca-chile-filt-box-toolkit {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.333% - 1.4rem);
+  max-width: 290px;
+  margin-bottom: 0;
+}
+
+// Toolkit wrap inner spacing
+.marca-chile-toolkit-wrap {
+  .row#content_category {
+    margin-top: $spacing-sm;
+  }
+}
+
+// Loading indicator
+#loading_noticias {
+  padding: $spacing-base 0;
+  font-family: $font-primary-light;
+  font-size: $font-size-base;
+  color: $color-grey-light;
+
+  img {
+    width: 30px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+}
+
+
+// ── Responsive: Tablet (≤ 768px) ──────────────────────────────
+
+@include respond-to($bp-md) {
+  .pathway {
+    font-size: 1.2rem;
+    top: 1rem;
+    left: 1.5rem;
+  }
+
+  .toolkit-search {
+    margin-bottom: $spacing-md;
+
+    &__input {
+      font-size: 1.4rem;
+      padding: 1.2rem;
+    }
+
+    &__btn {
+      padding: 0 1.5rem;
+    }
+  }
+
+  .media-overlay {
+    img {
+      width: 36px;
+      height: 36px;
+    }
+
+    &.zoom-btn {
+      opacity: 1;
+      background: rgba($color-black, 0.2);
+    }
+  }
+
+  // Cards: 2 per row on tablet
+  #content_category {
+    justify-content: flex-start;
+    gap: $spacing-md;
+  }
+
+  .marca-chile-filt-box-toolkit {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    margin-bottom: 0;
+  }
+
+  .marca-chile-card-toolkit-foto > picture.foto-ico {
+    span {
+      font-size: 1.1rem;
+      padding: 0.3rem 1rem;
+    }
+  }
+
+  // Hero as background cover on tablet
+  .marca-chile-cover__img {
+    min-height: 180px;
+
+    .marca-chile-image__cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-caption.v-12 {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 2rem;
+
+      h2 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+
+// ── Responsive: Mobile (≤ 576px) ──────────────────────────────
+
+@include respond-to($bp-sm) {
+  .toolkit-search {
+    &__input {
+      font-size: 1.3rem;
+      padding: 1rem;
+      border-radius: $border-radius-sm;
+
+      &::placeholder {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__btn {
+      padding: 0 1.5rem;
+      border-radius: $border-radius-sm;
+    }
+  }
+
+  .media-overlay img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-descarga {
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+  // Cards: 1 per row on mobile, full width
+  #content_category {
+    justify-content: center;
+    gap: $spacing-md;
+  }
+
+  .marca-chile-filt-box-toolkit {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  // Hero on mobile: ensure visible
+  .marca-chile-cover__img {
+    min-height: 160px;
+
+    .marca-chile-image__cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-caption.v-12 {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem 1.5rem;
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+
+  // Card image + box: ensure content visible
+  .marca-chile-card-toolkit-foto {
+    height: 180px;
+  }
+
+  .marca-chile-card-toolkit-foto-box {
+    gap: 1.5rem;
+
+    p {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
+  }
+}

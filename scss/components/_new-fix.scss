@@ -1,0 +1,1271 @@
+//Global
+.gx-small {
+    --bs-gutter-x: 6rem;
+}
+
+.marca-chile--bg-grey {
+    background-color: $marca-chile-color-beige;
+}
+
+// Header
+.marca-chile-header {
+    &__home {
+        .navbar {
+            background-color: rgba($color: $marca-chile-color-black, $alpha: .4);
+
+            .marca-chile-header {
+                &__home-submenu {
+                    .offcanvas-body {
+                        -ms-overflow-style: none;
+                        /* IE and Edge */
+                        scrollbar-width: none;
+
+                        /* Firefox */
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.marca-chile-header__scroll {
+            &.fixed--show {
+                .navbar {
+                    border-bottom: 4px solid $marca-chile-color-red;
+                }
+            }
+        }
+
+        &.marca-chile-header__interior {
+            .navbar {
+                border-bottom: 4px solid $marca-chile-color-red;
+            }
+        }
+    }
+}
+
+// Footer 
+.marca-chile-footer {
+    &-nav-rrss {
+        padding: 3.4rem 0 0;
+        margin-bottom: 0;
+    }
+
+    &-contact {
+        padding: 3.4rem 0;
+
+        li {
+            flex: 0 0 40%;
+            list-style-type: none;
+            text-align: right;
+            padding: 0 1.8rem;
+        }
+    }
+}
+
+// Modal search
+.marca-chile-modal-searchbar {
+    .modal-header {
+        .btn-close {
+            background-size: 18px;
+            background-image: url(../images/ico/ico-close-color.svg);
+            opacity: 1;
+            margin: auto 0 auto auto;
+        }
+    }
+}
+
+// Form searchbar
+.marca-chile-form {
+    &-searchbar__input {
+        border-bottom: 3px solid $marca-chile-color-white-2;
+        padding: 0;
+        transition: all ease .4s;
+
+        input {
+            &.form-control {
+                border-bottom: none;
+                transition: none;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        &:hover {
+            border-bottom: 3px solid $marca-chile-color-red;
+            transition: all ease .4s;
+
+            input {
+                &.form-control {
+                    border-bottom: none;
+                    transition: none;
+                }
+            }
+        }
+
+        &:focus-within {
+            border-bottom: 3px solid $marca-chile-color-red !important;
+            transition: all ease .4s !important;
+
+            input {
+                &.form-control {
+                    border-bottom: none;
+                    transition: none;
+                }
+            }
+
+            &::after {
+                background-image: url(../images/ico/ico-search-rojo.svg);
+                transition: all ease 0.4s;
+            }
+        }
+    }
+
+    &-portal__input {
+        position: relative;
+
+        &::before {
+            content: "Usuario / email";
+            position: absolute;
+            top: 0;
+            left: 4rem;
+            bottom: 0;
+            z-index: 2;
+            font-family: $font-family-primary-light;
+            font-size: 1.4rem;
+            height: fit-content;
+            color: $marca-chile-color-light-grey;
+            background-color: $marca-chile-color-white;
+            padding: 0;
+            margin: auto;
+            transition: all ease .4s;
+        }
+
+        &:hover {
+            &::before {
+                top: -5rem;
+                color: $marca-chile-color-red;
+                transition: all ease .4s;
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                content: "Contraseña";
+            }
+        }
+    }
+
+    &-resultado {
+        &__input {
+            border-bottom: 3px solid $marca-chile-color-white-2;
+            padding: 0;
+            transition: all ease .4s;
+
+            input {
+                &.form-control {
+                    border-bottom: none;
+                    transition: none;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            button {
+                &.btn {
+                    span {
+                        transition: all ease .4s;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .marca-chile-form-resultado__input {
+                border-bottom: 3px solid $marca-chile-color-red;
+                transition: all ease .4s;
+
+                input {
+                    &.form-control {
+                        border-bottom: none;
+                        transition: none;
+                    }
+                }
+            }
+
+            .marca-chile-form-resultado__button {
+                button {
+                    &.btn {
+                        span {
+                            background-image: url(../images/ico/ico-search-rojo.svg);
+                            transition: all ease .4s;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:focus-within {
+            .marca-chile-form-resultado__input {
+                border-bottom: 3px solid $marca-chile-color-red !important;
+                transition: all ease .4s !important;
+
+                input {
+                    &.form-control {
+                        border-bottom: none;
+                        transition: none;
+                    }
+                }
+            }
+
+            .marca-chile-form-resultado__button {
+                button {
+                    &.btn {
+                        span {
+                            background-image: url(../images/ico/ico-search-rojo.svg);
+                            transition: all ease .4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-newsletter {
+        &__button {
+            text-decoration: none;
+            border-radius: 0.4rem;
+        }
+    }
+}
+
+// Cover
+.marca-chile-cover {
+    &__text {
+        padding: 13.2rem 0 0;
+
+        &-title {
+            h2 {
+                font-family: $font-family-primary;
+                font-size: 5rem;
+            }
+
+            p {
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+
+            &.v-02 {
+                h2 {
+                    font-family: $font-family-primary;
+                }
+            }
+
+            &.v-03 {
+                h2 {
+                    font-family: $font-family-primary;
+                    font-size: 5rem;
+                }
+            }
+
+            &.v-04 {
+                padding: 0;
+
+                h1 {
+                    font-family: $font-family-primary;
+                    margin: 0 auto 3.4rem;
+
+                    span {
+                        color: $marca-chile-color-red;
+                    }
+                }
+            }
+
+            &.v-06 {
+                h1 {
+                    font-size: 3.5rem;
+                    line-height: 4.5rem;
+                    color: $marca-chile-color-grey;
+                    margin: 0 auto 2.5rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+
+        &.v-02 {
+            padding: 12.8rem 5.4rem 1.4rem;
+        }
+    }
+
+    &__img {
+        &-caption {
+            &.v-03 {
+                box-shadow: none;
+            }
+
+            &.v-04 {
+                border-left: none;
+            }
+
+            &.v-07 {
+                top: 20.4rem;
+            }
+
+            &.v-09 {
+                h6 {
+                    font-family: $font-family-primary;
+                    font-size: 1.4rem;
+                }
+            }
+
+            &-info {
+                height: fit-content;
+            }
+        }
+
+        .marca-chile-cover__img-caption {
+            &-box-color {
+                .col-blue-v-01 {
+                    width: 50%;
+                }
+
+                .col-blue-v-02 {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+// Sticky
+.marca-chile-sticky {
+    top: initial;
+    bottom: 2rem;
+}
+
+// Cards
+.marca-chile-card {
+    padding: 3.4rem 0 3.4rem !important;
+
+    .marca-chile-card-home-bottom {
+        margin-bottom: 3.4rem;
+
+        .card-body {
+            p {
+                color: $marca-chile-color-light-grey;
+            }
+
+            .btn-ver-mas {
+                display: flex;
+                font-family: $font-family-primary-light;
+                font-size: 1.6rem;
+                color: $marca-chile-color-red;
+                background-color: transparent;
+                height: fit-content;
+                width: fit-content;
+                padding: 0;
+
+                &::after {
+                    content: "";
+                    width: 4px;
+                    height: 4px;
+                    background-color: #E4032C;
+                    margin: auto 0 .6rem .3rem;
+                }
+            }
+        }
+    }
+
+    .container {
+        .row> {
+            div:last-child {
+                .marca-chile-card-home-bottom {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &-home-bottom {
+        .card-body {
+            h3 {
+                margin-bottom: 2rem;
+            }
+
+            .btn-ver-mas {
+                margin-top: auto;
+            }
+        }
+
+        .marca-chile-card-scroll-img {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+
+            /* Firefox */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &.marca-chile-card-new-masonry {
+        .container {
+            .card-masonry-link {
+                figure {
+                    margin-bottom: 3.4rem;
+
+                    picture {
+                        max-height: 190px;
+                        overflow: hidden;
+
+                        img {
+                            transform: scale(1);
+                            transition: all ease .4s;
+                        }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.1);
+                                transition: all ease .4s;
+                            }
+                        }
+                    }
+
+                    figcaption {
+                        background-color: transparent;
+                        border-radius: 0;
+
+                        h6 {
+                            position: relative;
+                            border-left: none;
+                            padding: 0.5rem 1rem 0.5rem 2rem;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 4px;
+                                height: 100%;
+                                background-color: $marca-chile-color-red-second;
+                            }
+                        }
+
+                        p {
+                            font-family: $font-family-primary;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            letter-spacing: 0.8px;
+                            padding: 0 1rem 0 2rem;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &--bg-blue {
+                    figure {
+                        margin-bottom: 3.4rem;
+
+                        figcaption {
+                            background-color: $marca-chile-color-blue;
+
+                            h6 {
+                                &::before {
+                                    background-color: $marca-chile-color-white;
+                                }
+                            }
+
+                            h5 {
+                                font-family: $font-family-primary-bold;
+                                letter-spacing: initial;
+                                font-size: 1.8rem;
+                                line-height: 2.3rem;
+                            }
+                        }
+                    }
+                }
+
+                &--bg-green {
+                    figure {
+                        margin-bottom: 3.4rem;
+
+                        figcaption {
+                            background-color: $marca-chile-color-light-green;
+
+                            h6 {
+                                &::before {
+                                    background-color: $marca-chile-color-white;
+                                }
+                            }
+
+                            h5 {
+                                font-family: $font-family-primary-bold;
+                                letter-spacing: initial;
+                                font-size: 1.8rem;
+                                line-height: 2.3rem;
+                            }
+                        }
+                    }
+                }
+
+                &.full {
+                    figure {
+                        picture {
+                            max-height: initial;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    figure {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .marca-chile-card-thumbnail {
+        margin-bottom: 3.4rem;
+
+        picture {
+            width: 53%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card-body {
+            p {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-size: 1.4rem;
+                color: $marca-chile-color-grey;
+                transition: all ease .4s;
+            }
+
+            &:hover {
+                p {
+                    color: $marca-chile-color-red;
+                    transition: all ease .4s;
+                }
+            }
+        }
+    }
+
+    .marca-chile-card-alianzas {
+        border: none;
+        outline: 2px solid $marca-chile-color-white-2;
+    }
+
+    .marca-chile-card-directorio {
+        .card-body {
+            h6 {
+                &:before {
+                    bottom: initial;
+                    top: -44px;
+                }
+            }
+        }
+    }
+
+    .text-center {
+        .btn-ver-mas {
+            margin: 0 auto 0;
+        }
+    }
+}
+
+// News
+.marca-chile-news {
+    &__main {
+        picture {
+            margin-bottom: 2rem;
+        }
+
+        &-rrss-nav {
+            position: sticky;
+            top: 11rem;
+
+            li {
+                width: 31.5px;
+            }
+        }
+
+        &__blog {
+            &.marca-chile-news__main {
+                .marca-chile-news__main-text {
+                    .marca-chile-news__main-opinion-nav {
+                        li {
+                            a {
+                                transition: all ease .4s;
+
+                                &:hover {
+                                    color: $marca-chile-color-white;
+                                    background-color: $marca-chile-color-blue;
+                                    transition: all ease .4s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-block-quote {
+            border-left: 5px solid $marca-chile-color-blue;
+
+            p {
+                &:first-child {
+                    &::before {
+                        background-image: url(../images/ico/ico-quote-blue.svg);
+                    }
+                }
+            }
+        }
+
+        &__epigrafe {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            span {
+                font-size: 1.4rem;
+                color: $marca-chile-color-light-grey;
+            }
+        }
+
+        &-tags-nav {
+            li {
+                a {
+                    background-color: $marca-chile-color-white-2;
+                }
+            }
+        }
+
+        &-text {
+            h6 {
+                color: $marca-chile-color-black;
+            }
+
+            p {
+                color: $marca-chile-color-grey;
+            }
+        }
+
+        &-read-more {
+            .marca-chile-card-thumbnail {
+                width: 100%;
+
+                picture {
+                    width: auto;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .card-body {
+                    flex: 1 1 auto;
+                    height: 100%;
+                    padding: 1.8rem 1.4rem;
+
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        font-size: 1.4rem;
+                        color: $marca-chile-color-grey;
+                        transition: all ease 0.4s;
+                    }
+                }
+            }
+        }
+    }
+
+    &__sidebar {
+        position: sticky;
+        top: 11rem;
+
+        >picture {
+            &.banner {
+                margin-bottom: 3.4rem;
+                margin-top: 2.4rem;
+            }
+        }
+
+        &-resultado {
+            &.marca-chile-news__main {
+                h6 {
+                    span {
+                        color: $marca-chile-color-red;
+                        font-family: $font-family-primary-bold;
+                    }
+                }
+
+                .marca-chile-news__main-resultado-title {
+                    p {
+                        color: $marca-chile-color-light-grey;
+                    }
+                }
+
+                &-tags {
+                    .marca-chile-news__main-tags-nav {
+                        li {
+                            a {
+                                color: $marca-chile-color-red;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.card {
+                .card-body {
+                    p {
+                        letter-spacing: 0.8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Chile sustentable
+.marca-chile-cover__img-caption {
+    &.v-06 {
+        top: auto;
+        bottom: 3rem;
+
+        h6 {
+            font-family: $font-family-primary;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// Made by Chileans
+.marca-chile-made-by-chileans {
+    .menu-mbc {
+        background-color: $marca-chile-color-red;
+    }
+}
+
+// Newsletter
+.marca-chile-newsletter {
+    margin-bottom: 0;
+
+    h4 {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 2rem;
+    }
+
+    h2 {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+
+// Mobile
+@media screen and (max-width: $md) {
+
+    //Global
+    .gx-small {
+        --bs-gutter-x: 0;
+    }
+
+    //Header 
+    .marca-chile-header {
+        &__mobile {
+            .navbar {
+                background-color: rgba($color: $marca-chile-color-black, $alpha: .5)
+            }
+
+            &.marca-chile-header__interior {
+                .navbar {
+                    border-bottom: 4px solid $marca-chile-color-red;
+                }
+            }
+        }
+    }
+
+    // Cover
+    .marca-chile-cover {
+        &.marca-chile-cover__slider {
+            .splide__track {
+                height: fit-content;
+            }
+        }
+
+        &__img {
+            margin-bottom: 0;
+
+            .row {
+                >.col {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                }
+            }
+
+            &-caption {
+                &-info {
+                    position: relative;
+                    order: 2;
+                    top: 0;
+                    width: 100%;
+
+                    h1 {
+                        font-size: 3.6rem;
+                    }
+
+                    p {
+                        font-size: 1.8rem;
+                        line-height: 2.5rem;
+                    }
+                }
+
+                &.v-03 {
+                    h6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: center;
+                        font-family: Chilena Light;
+                        font-size: 2.3rem;
+                        line-height: 2.6rem;
+
+                        span {
+                            display: flex;
+                            font-family: Chilena Light;
+                            font-size: 2.3rem;
+                            line-height: 2.6rem;
+                            color: $marca-chile-color-red;
+                            margin-left: 0;
+
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &.v-04 {
+                    padding: 2.6rem 4rem 2rem;
+                }
+
+                &.v-05 {
+                    top: 25rem;
+                    bottom: initial;
+                }
+            }
+
+            .marca-chile-image__cover {
+                &.v-02 {
+                    display: none;
+                }
+            }
+        }
+
+        .marca-chile-image {
+            &__cover {
+
+                &.v-02 {
+                    order: 1;
+                }
+
+                &.v-03 {
+                    order: 1;
+                }
+
+                &.v-04 {
+                    order: 1;
+                }
+            }
+
+            &__text {
+                width: 100%;
+            }
+        }
+
+        &__text {
+            padding: 13.2rem 1.5rem 0;
+
+            &-title {
+                h2 {
+                    font-size: 3.6rem;
+                    line-height: 4.5rem;
+                }
+
+                &.v-03 {
+                    h2 {
+                        font-size: 3.6rem;
+                        line-height: 4.5rem;
+                    }
+                }
+
+                &.v-04 {
+                    padding: 0 1rem;
+
+                    h1 {
+                        font-size: 3.6rem;
+                        line-height: 4.5rem;
+                    }
+                }
+
+                &.v-06 {
+                    h1 {
+                        font-size: 2.5rem;
+                        line-height: 3.5rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
+                    }
+                }
+            }
+
+            &.v-02 {
+                padding: 12.8rem 0 0;
+            }
+        }
+    }
+
+    // Image
+    .marca-chile-image {
+        &__cover {
+            &.v-02 {
+                order: 1;
+            }
+
+            &.v-03 {
+                order: 1;
+            }
+        }
+
+        &__text {
+            width: 100%;
+        }
+    }
+
+    // Card
+    .marca-chile-card {
+        &.marca-chile-card-new-masonry {
+            .container {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+
+                .card-masonry-link {
+                    figure {
+                        picture {
+                            max-height: initial;
+                        }
+
+                        figcaption {
+                            h6 {
+                                font-family: $font-family-primary-light;
+                                font-size: 1.8rem;
+                                line-height: 2.6rem;
+                            }
+
+                            p {
+                                font-family: $font-family-primary-light;
+                                font-size: 1.8rem;
+                                letter-spacing: 1.15px;
+                                line-height: 2.5rem;
+                                color: $marca-chile-color-light-grey;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &--bg-blue {
+                        figure {
+                            figcaption {
+                                h5 {
+                                    font-family: Chilena Light;
+                                    font-size: 2.3rem;
+                                    letter-spacing: 1.15px;
+                                    line-height: 2.5rem;
+                                }
+                            }
+                        }
+                    }
+
+                    &--bg-green {
+                        figure {
+                            figcaption {
+                                h5 {
+                                    font-family: Chilena Light;
+                                    font-size: 2.3rem;
+                                    letter-spacing: 1.15px;
+                                    line-height: 2.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .marca-chile-card-home-bottom {
+            .card-body {
+                h3 {
+                    line-height: 4rem;
+                    margin-bottom: 1rem;
+
+                    span {
+                        font-family: $font-family-primary-light;
+                    }
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+
+        .marca-chile-card-thumbnail {
+            picture {
+                width: auto;
+                max-width: 50%;
+            }
+
+            .card-body {
+                flex: 0 0 50%;
+
+                p {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+
+        .marca-chile-card-directorio {
+            picture {
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    // News
+    .marca-chile-news {
+        &__main {
+            &-read-more {
+                .marca-chile-card-thumbnail {
+                    width: 100%;
+                    margin-bottom: 3rem;
+                }
+            }
+
+            &-resultado {
+                h4 {
+                    font-size: 2.3rem;
+                }
+
+                p {
+                    font-family: $font-family-primary-light;
+                    color: $marca-chile-color-light-grey;
+                }
+            }
+        }
+
+        &__sidebar {
+            &-resultado {
+                &.marca-chile-news__main {
+                    h6 {
+                        font-size: 2.3rem;
+                        line-height: 2.5rem;
+
+                        span {
+                            display: flex;
+                            margin: 1rem 0;
+                        }
+                    }
+
+                    p {
+                        font-size: 2.3rem;
+                    }
+
+                    .wp-pagenavi {
+                        width: 100%;
+                    }
+                }
+
+                &.marca-chile-news__sidebar {
+                    h6 {
+                        font-size: 2.3rem;
+                    }
+                }
+
+                &.marca-chile-news__main-tags {
+                    .marca-chile-news__main-tags-nav {
+                        li {
+                            a {
+                                font-size: 2.3rem;
+                            }
+                        }
+                    }
+                }
+
+                &.card {
+                    .card-header {
+                        h6 {
+                            font-size: 2.3rem;
+                            line-height: 2rem;
+                        }
+                    }
+
+                    .card-body {
+                        p {
+                            font-size: 2.3rem;
+                            line-height: 2.2rem;
+                            color: $marca-chile-color-light-grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Form
+    .marca-chile-form {
+        &-resultado {
+            margin: 0 auto 3rem;
+        }
+
+        &-portal {
+            &__input {
+                padding: 0 1.5rem;
+
+                input {
+                    &.form-control {
+                        border: 1px solid $marca-chile-color-white-2;
+                    }
+                }
+            }
+        }
+
+        &-newsletter {
+            &__input {
+                margin-top: 2rem;
+            }
+
+            &__button {
+                right: auto;
+            }
+        }
+    }
+
+    // About
+    .marca-chile-about {
+        .marca-chile-about-col {
+            p {
+                font-size: 2.3rem;
+                line-height: 2.6rem;
+            }
+        }
+    }
+
+    // Paginador
+    .marca-chile-pagination {
+        width: 100%;
+
+        &::before {
+            content: "";
+            background-color: $marca-chile-color-white-2;
+            display: flex;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: auto;
+            right: 0;
+            bottom: 3.5rem;
+            left: 0;
+            margin: auto;
+        }
+    }
+
+    // Footer
+    .marca-chile-footer {
+        background-color: $marca-chile-color-white;
+
+        &-bottom {
+            background-color: $marca-chile-color-white;
+
+            &-nav {
+                li {
+                    border-top: 1px solid $marca-chile-color-red;
+                }
+            }
+        }
+
+        &-contact {
+            padding: 1.5rem 0.5rem;
+
+            li {
+                font-size: 2.3rem;
+                text-align: left;
+                flex: 0 0 100%;
+                padding: 1.5rem 1.8rem;
+            }
+        }
+
+        &-nav-rrss {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            li {
+                flex: 0 0 auto;
+                width: 25%;
+                margin: 0 0 2rem;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        width: 5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //Newsletter
+    .marca-chile-newsletter {
+        .row {
+            >div {
+                flex-wrap: wrap;
+            }
+        }
+
+        h2 {
+            font-size: 3.4rem;
+        }
+    }
+}

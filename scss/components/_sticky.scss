@@ -1,0 +1,166 @@
+// Desktop
+.marca-chile-sticky {
+    position: fixed;
+    top: 660px;
+    right: 50px;
+    width: auto;
+    height: auto;
+    border-radius: 100%;
+    z-index: 99;
+
+    &__accessib {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 53px;
+        height: 53px;
+        appearance: none;
+        border: none;
+        background-color: transparent;
+        border-radius: 100%;
+        padding: 0;
+        span {
+            width: 43px;
+            height: 43px;
+            background-image: url("../images/ico/ico-accessibility.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: -.35rem 0.4rem .25rem rgba(0, 0, 0, 0.15);
+            border-radius: 100%;
+        }
+
+        &-close {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            //display: none;
+            flex-wrap: wrap;
+            appearance: none;
+            border: none;
+            background-color: transparent;
+            border-radius: 100%;
+            padding: 0.5rem;
+            transition: all ease .4s;
+
+            span {
+                width: 43px;
+                height: 43px;
+                background-image: url("../images/ico/ico-accessibility-close.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    &__wrap {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        width: 343px;
+        height: 0;
+        transition: all ease .6s;
+
+        &.open {
+            height: 486px;
+            transition: all ease .6s;
+
+            .marca-chile-sticky__options {
+                //height: 466px;
+                //box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+                opacity: 1;
+                transform: translateY(0);
+                transition: all ease .4s;
+            }
+        }
+
+    }
+
+    &__options {
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(466px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: all ease .4s;
+
+        &-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 323px;
+            min-height: 64px;
+            color: $marca-chile-color-white;
+            background-color: #3267ce;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+            border-radius: 1.5rem 1.5rem 0 0;
+            padding: 1.5rem 2.5rem;
+
+            h5 {
+                font-size: 2.2rem;
+            }
+        }
+
+        &-body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: center;
+            width: 323px;
+            min-height: 402px;
+            background-color: $marca-chile-color-white;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+            padding: 1.5rem 2.5rem;
+
+            .card {
+                text-decoration: none;
+                width: 100%;
+                background-color: $marca-chile-color-light;
+                border: none;
+                border-radius: 0.5rem;
+                padding: 2.3rem 0 0.7rem;
+
+                span {
+                    width: auto;
+                    background-color: transparent;
+                    border: none;
+                    margin: auto;
+
+                    img {
+                        width: 38px;
+                    }
+                }
+
+                .card-body {
+                    width: 100%;
+
+                    h6 {
+                        font-size: 1.2rem;
+                        line-height: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-sticky {
+        right: 10px;
+    }
+}

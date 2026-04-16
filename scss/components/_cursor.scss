@@ -1,0 +1,29 @@
+// Desktop
+body {
+    &.marca-chile-cursor {
+        cursor: url("../images/ico/ico-cursor.png"), auto !important;
+
+        a {
+            cursor: url("../images/ico/ico-pointer.png"), auto !important;
+
+            &:hover {
+                cursor: url("../images/ico/ico-pointer.png"), auto !important;
+            }
+        }
+
+        button {
+            cursor: url("../images/ico/ico-pointer.png"), auto !important;
+
+            &:hover {
+                cursor: url("../images/ico/ico-pointer.png"), auto !important;
+            }
+        }
+    }
+}
+
+
+
+// Mobile
+// @media screen and (max-width: $md) {
+//     .marca-chile-marca-chile-cursor {}
+// }

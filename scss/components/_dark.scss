@@ -1,0 +1,128 @@
+// Desktop
+body {
+    &.marca-chile-card-high-contrast {
+        color: $marca-chile-color-white;
+        background-color: $marca-chile-color-black !important;
+
+        section {
+            * {
+                filter: grayscale(100%) !important;
+            }
+
+            img {
+                filter: grayscale(100%);
+                background-color: transparent !important;
+            }
+
+            svg {
+                filter: grayscale(100%);
+                background-color: transparent !important;
+            }
+
+            &.marca-chile {
+                &-newsletter {
+                    filter: grayscale(100%) !important;
+                }
+            }
+        }
+
+        header {
+            .marca-chile-header {
+                &__home {
+                    &-submenu {
+                        .navbar-toggler {
+                            filter: grayscale(100%) !important;
+                        }
+
+                        .navbar-brand {
+                            filter: grayscale(100%) !important;
+                        }
+
+                        .offcanvas {
+                            * {
+                                color: $marca-chile-color-white !important;
+                                background-color: $marca-chile-color-black !important;
+                                filter: grayscale(100%) !important;
+
+                                img {
+                                    filter: grayscale(100%) !important;
+                                    background-color: transparent !important;
+                                }
+
+                                svg {
+                                    filter: grayscale(100%) !important;
+                                    background-color: transparent !important;
+                                }
+                            }
+                        }
+                    }
+
+                    &-links {
+                        filter: grayscale(100%) !important;
+                    }
+
+                    &-btn {
+                        filter: grayscale(100%) !important;
+                    }
+                }
+
+                &__mobile {
+                    &-submenu {
+                        .navbar-toggler {
+                            filter: grayscale(100%) !important;
+                        }
+
+                        .offcanvas {
+                            * {
+                                color: $marca-chile-color-white !important;
+                                background-color: $marca-chile-color-black !important;
+                                filter: grayscale(100%) !important;
+
+                                img {
+                                    filter: grayscale(100%) !important;
+                                    background-color: transparent !important;
+                                }
+
+                                svg {
+                                    filter: grayscale(100%) !important;
+                                    background-color: transparent !important;
+                                }
+                            }
+                        }
+
+                        .navbar-brand {
+                            filter: grayscale(100%) !important;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        footer {
+            * {
+                filter: grayscale(100%) !important;
+            }
+
+            img {
+                filter: grayscale(100%);
+                background-color: transparent !important;
+            }
+
+            svg {
+                filter: grayscale(100%);
+                background-color: transparent !important;
+            }
+        }
+
+        .marca-chile-modal {
+            &-searchbar {
+                .modal-dialog {
+                    * {
+                        filter: grayscale(100%) !important;
+                    }
+                }
+            }
+        }
+    }
+}

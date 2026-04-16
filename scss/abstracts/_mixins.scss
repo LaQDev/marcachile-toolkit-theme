@@ -1,0 +1,78 @@
+// ============================================================
+// Mixins – Marca Chile
+// Helpers reutilizables. Sin prefijos vendor (usar autoprefixer).
+// ============================================================
+
+
+// ── Media Queries ───────────────────────────────────────────
+
+@mixin respond-to($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-from($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
+// ── Flexbox ─────────────────────────────────────────────────
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+// ── Backgrounds ─────────────────────────────────────────────
+
+@mixin bg-cover {
+  background: no-repeat center / cover;
+}
+
+
+// ── Positioning ─────────────────────────────────────────────
+
+@mixin absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+// ── Texto ───────────────────────────────────────────────────
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

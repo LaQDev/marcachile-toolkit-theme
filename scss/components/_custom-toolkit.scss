@@ -1,0 +1,876 @@
+// ============================================================
+// Custom Toolkit Overrides
+// Migrado desde custom_toolkit.css a SCSS con variables.
+// ============================================================
+
+
+// ── Mi Cuenta – Cover title alignment ───────────────────────
+
+.marca-chile-toolkit--padd .marca-chile-cover__text-title {
+  text-align: left;
+}
+
+
+// ── Portal Forms (Ultimate Member) ──────────────────────────
+
+.marca-chile-form-portal__input input.form-control {
+  background: $color-white !important;
+}
+
+.marca-chile-form-portal {
+  display: block !important;
+}
+
+.um .um-form input[type=text],
+.um .um-form input[type=search],
+.um .um-form input[type=tel],
+.um .um-form input[type=password],
+.um .um-form textarea {
+  border-radius: $border-radius-sm !important;
+  border: 2px solid $color-white-2 !important;
+  padding-right: 7rem !important;
+}
+
+.um input[type=submit].um-button {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: $font-primary-bold;
+  font-size: $font-size-base;
+  text-align: center;
+  width: 100%;
+  appearance: none;
+  color: $color-white;
+  background-color: $color-red !important;
+  border: none;
+  padding: 0 4.5rem;
+}
+
+a.um-link-alt {
+  color: $color-red !important;
+}
+
+
+// ── Filter Buttons (Toolkit) ────────────────────────────────
+
+.marca-chile-toolkit .marca-chile-filter-buttons {
+  position: relative;
+  text-align: center;
+  width: 520px;
+  overflow: hidden;
+  border-radius: $border-radius-pill;
+  border: 1px solid $color-beige-medium;
+  margin-left: $spacing-base;
+  margin-bottom: $spacing-base;
+
+  a {
+    font-family: $font-primary-light;
+    font-size: $font-size-base;
+    font-weight: 300;
+    color: $color-red;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    float: left;
+    padding: $spacing-xs 0;
+    width: 25%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    transition: $transition-slow;
+    z-index: 2;
+
+    &:first-of-type {
+      border-radius: $border-radius-pill 0 0 $border-radius-pill;
+    }
+
+    &:last-of-type {
+      border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    }
+
+    &:hover {
+      background-color: $color-red;
+      color: $color-white;
+      transition: $transition-slow;
+    }
+
+    &.active {
+      color: $color-white;
+      background-color: $color-red;
+      transition: $transition-base;
+    }
+
+    &:nth-child(1):hover ~ .effect { left: 12.5%; }
+    &:nth-child(2):hover ~ .effect { left: 37.5%; }
+    &:nth-child(3):hover ~ .effect { left: 62.5%; }
+    &:nth-child(4):hover ~ .effect { left: 87.5%; }
+  }
+
+  .effect {
+    position: absolute;
+    left: -12.5%;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 25%;
+    height: 100%;
+    background: $color-red;
+    box-shadow: 0 1px 0 $color-white;
+    margin-left: -12.5%;
+    transition: $transition-slow;
+  }
+}
+
+
+// ── WP-PageNavi ─────────────────────────────────────────────
+
+.wp-pagenavi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-base;
+  text-align: center;
+  color: $color-grey;
+  border-radius: 0;
+  border: 0;
+  height: 100%;
+
+  .current {
+    color: $color-white;
+    background-color: $color-red;
+    border-bottom: 1px solid transparent;
+  }
+
+  a, span {
+    border-bottom: 1px solid $color-grey-light !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    padding: 10px 15px !important;
+  }
+}
+
+.page.larger,
+.current,
+.page.smaller,
+.previouspostslink {
+  text-decoration: none;
+  border: 0 !important;
+  padding: 10px 15px;
+  margin: 2px;
+  color: $color-black;
+}
+
+.pages,
+.extend {
+  display: none;
+}
+
+.nextpostslink,
+.last {
+  color: $color-black;
+}
+
+
+// ── Header Logo Fix ─────────────────────────────────────────
+
+.marca-chile-header__home .navbar .marca-chile-header__home-submenu .navbar-brand-logo {
+  background-size: auto;
+}
+
+
+// ── Sidebar Mobile (Toolkit) ────────────────────────────────
+
+.marca-chile-toolkit .sidebar-toolkit-mob-container .sidebar-toolkit-mob-toggle {
+  cursor: pointer !important;
+}
+
+
+// ── Cover Position ──────────────────────────────────────────
+
+.marca-chile-cover {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    width: 100%;
+    content: "";
+    display: block;
+    height: 100%;
+  }
+}
+
+
+// ── Recover Password Pages ─────────────────────────────────
+
+.recover-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  padding: 12rem 2rem 4rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+
+  .recover-title {
+    font-family: $font-primary-bold;
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+    color: $color-grey;
+    margin-bottom: $spacing-base;
+  }
+
+  .recover-desc {
+    font-family: $font-primary-light;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $color-grey-light;
+    margin-bottom: $spacing-lg;
+  }
+
+  // Ultimate Member form overrides for recover page
+  .um-form {
+    width: 100%;
+    text-align: left;
+
+    .um-field {
+      margin-bottom: $spacing-md;
+    }
+
+    label.um-field-label {
+      font-family: $font-primary;
+      font-size: 1.3rem;
+      color: $color-grey-light;
+      margin-bottom: 0.6rem;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+      display: block;
+      width: 100%;
+      height: 4.5rem;
+      font-family: $font-primary-light;
+      font-size: 1.4rem;
+      color: $color-grey;
+      background-color: $color-white;
+      border: 1px solid #E8E8E8 !important;
+      border-radius: $border-radius-sm !important;
+      padding: 0 1.5rem !important;
+      outline: none;
+
+      &:focus {
+        border-color: $color-red !important;
+      }
+    }
+
+    input[type=submit].um-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 4.5rem;
+      font-family: $font-primary-bold;
+      font-size: $font-size-base;
+      color: $color-white;
+      background-color: $color-red !important;
+      border: none;
+      border-radius: $border-radius-sm;
+      cursor: pointer;
+    }
+  }
+
+  .recover-back {
+    display: inline-block;
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    color: #53565A;
+    text-decoration: none;
+    text-align: center;
+    margin-top: $spacing-base;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Toolkit search input border color (3.1.2)
+.toolkit-search__input {
+  border: 1px solid #E8E8E8;
+}
+
+
+// ── Password Validation Goals ──────────────────────────────
+
+.password-goal,
+#goal_pass_len,
+#goal_pass_case,
+#goal_pass_mix,
+#goal_pass_match,
+#goalcantidad,
+#goalmayuscula,
+#goalletranumero,
+#goalcoinciden {
+  font-family: $font-primary-light;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: $color-grey;
+  margin-bottom: 0.4rem;
+  padding-left: 1.5rem;
+  position: relative;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+  }
+
+  &.valid {
+    color: #19A34D;
+  }
+
+  &.invalid {
+    color: $color-red;
+  }
+}
+
+
+// ── Search Modal Logo ───────────────────────────────────────
+
+.marca-chile-modal-searchbar .modal-header .navbar-brand-logo {
+  background-image: url(../images/logo/ico-logo-color.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 115px;
+}
+
+
+// ── Toolkit Card Links ──────────────────────────────────────
+
+.marca-chile-toolkit .marca-chile-card-toolkit-foto-box span {
+  text-decoration: none;
+}
+
+.foto-link-descarga .btn,
+.foto-link-ver a,
+.marca-chile-toolkit .marca-chile-card-toolkit-foto-box .foto-link-descarga a,
+.video-link-descarga .btn {
+  font-size: 1.3rem !important;
+  margin-top: $spacing-sm;
+}
+
+.previsualizar:before {
+  content: "";
+  width: 13px;
+  height: 9px;
+  background: url("../images/ico/toolkit/ico-toolkit-content-02.svg") no-repeat;
+  float: left;
+  position: relative;
+  top: 0.7rem;
+  right: $spacing-xs;
+}
+
+
+// ── Burger Menu ─────────────────────────────────────────────
+
+.burger {
+  --w: 34px;
+  --h: 90px;
+  --t: 3px;
+  --gap: 7px;
+  display: inline-flex;
+  width: var(--w);
+  height: var(--h);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  padding-right: 30px;
+  padding-left: 5px;
+  -webkit-tap-highlight-color: transparent;
+
+  &__toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__line {
+    position: absolute;
+    width: var(--w);
+    height: var(--t);
+    background: currentColor;
+    border-radius: 999px;
+    transition: transform $transition-fast, opacity 0.18s ease;
+
+    &:nth-child(2) { transform: translateY(calc(-1 * var(--gap))); }
+    &:nth-child(3) { transform: translateY(0); }
+    &:nth-child(4) { transform: translateY(var(--gap)); }
+  }
+
+  &__toggle:checked ~ .burger__line {
+    &:nth-child(2) { transform: translateY(0) rotate(45deg); }
+    &:nth-child(3) { opacity: 0; }
+    &:nth-child(4) { transform: translateY(0) rotate(-45deg); }
+  }
+}
+
+
+// ── Responsive Overrides ────────────────────────────────────
+
+@include respond-to($bp-md) {
+  .navbar-brand-logo {
+    background-size: auto !important;
+  }
+
+  .marca-chile-toolkit .marca-chile-filter-wrap {
+    .marca-chile-filter-buttons {
+      a {
+        width: 50%;
+
+        &:first-of-type,
+        &:last-of-type {
+          border-radius: 0;
+        }
+
+        &:nth-child(1):hover ~ .effect,
+        &:nth-child(2):hover ~ .effect,
+        &:nth-child(3):hover ~ .effect,
+        &:nth-child(4):hover ~ .effect {
+          left: 0;
+        }
+      }
+
+      .effect {
+        display: none;
+      }
+    }
+  }
+
+  .marca-chile-toolkit-wrap {
+    padding: $spacing-md $spacing-sm;
+  }
+
+  .marca-chile-toolkit .sidebar-toolkit-mob {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid $color-beige-medium;
+    border-radius: $border-radius-sm;
+    padding-left: 0;
+  }
+
+  .marca-chile-toolkit .sidebar-toolkit-mob-container {
+    position: relative;
+  }
+
+  .marca-chile-toolkit .sidebar-toolkit-mob-link {
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    background-color: $color-white;
+    padding: 0 $spacing-md;
+    transition: $transition-base;
+
+    a {
+      display: inline-flex;
+      font-family: $font-primary-bold;
+      text-decoration: none;
+      color: $color-black;
+      border-bottom: 2px solid $color-beige-medium;
+      width: 100%;
+      padding: $spacing-sm 0;
+      margin: 0;
+
+      img {
+        margin-right: $spacing-xs;
+
+        &.ico-black { display: flex; }
+        &.ico-red   { display: none; }
+      }
+    }
+
+    &.sidebar-toolkit-mob-collapse {
+      position: relative;
+      max-height: fit-content;
+      overflow: initial;
+      transition: $transition-base;
+
+      a { border-bottom: none; }
+    }
+
+    &.show {
+      a.sidebar-toolkit-mob-link-wrap {
+        color: $color-red;
+        border-bottom: none;
+
+        img.ico-black { display: none; }
+        img.ico-red   { display: flex; }
+      }
+
+      .sidebar-toolkit-mob-sublist {
+        max-height: fit-content;
+        overflow: initial;
+        transition: $transition-base;
+      }
+    }
+
+    &.active {
+      position: relative;
+      max-height: fit-content;
+      overflow: initial;
+      transition: $transition-base;
+
+      a {
+        color: $color-red;
+        border-bottom: none;
+
+        img.ico-black { display: none; }
+        img.ico-red   { display: flex; }
+      }
+
+      .sidebar-toolkit-mob-sublist-link a {
+        color: $color-black;
+      }
+
+      .sidebar-toolkit-mob-sublist-link.active a {
+        color: $color-red;
+      }
+    }
+  }
+
+  .marca-chile-toolkit .sidebar-toolkit-mob-sublist {
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition-base;
+
+    &-link a {
+      font-family: $font-primary;
+      border-bottom: none;
+    }
+  }
+
+  // 6.1.3 Remove padding from toolkit padd on mobile/tablet
+  .marca-chile-toolkit--padd {
+    padding: 0;
+  }
+
+  // 6.1.5 Lightbox overlay for mobile sidebar
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-black, 0.5);
+    z-index: 99;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  // 6.3.1 Gallery full width on mobile/tablet (no sidebar displacing)
+  .marca-chile-col-toolkit:first-child {
+    flex: 0 0 0 !important;
+    max-width: 0 !important;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+
+  .marca-chile-col-toolkit:last-child {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+// ── 6.1.1 Sidebar responsive widths ────────────────────────
+
+// Tablet to 1200px: max-width 280px
+@media only screen and (min-width: $bp-md + 1) and (max-width: $bp-xl) {
+  .marca-chile-col-toolkit:first-child {
+    flex: 0 0 280px !important;
+    max-width: 280px !important;
+  }
+
+  .marca-chile-col-toolkit:last-child {
+    flex: 1 !important;
+    max-width: calc(100% - 280px) !important;
+  }
+}
+
+// 1200px+: sidebar stays at 355px (default, already set)
+
+
+// ── 6.1.2 Active sidebar items in red ──────────────────────
+
+.sidebar-toolkit {
+  .sidebar-toolkit-link.active > a,
+  .sidebar-toolkit-sub.active > a {
+    color: $color-red;
+
+    img.menu-icon {
+      filter: brightness(0) saturate(100%) invert(14%) sepia(95%) saturate(6932%) hue-rotate(350deg) brightness(87%) contrast(103%);
+    }
+  }
+
+  .sidebar-toolkit-list-link.active > a {
+    color: $color-red;
+  }
+}
+
+
+// ── 6.1.4 Gap 20px for dropdown menu items ─────────────────
+
+.sidebar-toolkit-mob-link.show .sidebar-toolkit-mob-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: $spacing-base;
+}
+
+
+// ── 6.2.2 Hide marca-chile-filter on search results ────────
+
+.marca-chile-toolkit .search-results-page .marca-chile-filter {
+  display: none;
+}
+
+
+// ── 6.3.3 Modal lightbox design ────────────────────────────
+
+.modal.toolkit-modal {
+  .modal-dialog {
+    max-width: 80vw;
+  }
+
+  .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    .modal-header {
+      border-bottom: none;
+      padding: 1rem;
+      justify-content: flex-end;
+
+      .btn-close {
+        filter: invert(1);
+        opacity: 1;
+      }
+    }
+
+    .modal-body {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img, video {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: $border-radius-md;
+      }
+    }
+  }
+}
+
+// General modal override for toolkit previews - lightbox style
+.marca-chile-toolkit {
+  .modal .modal-dialog .modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    .modal-header {
+      border-bottom: none;
+      padding: 0.5rem 1rem;
+      justify-content: flex-end;
+
+      .btn-close {
+        filter: invert(1);
+        opacity: 1;
+      }
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+  }
+
+  .modal-backdrop.show {
+    opacity: 0.8;
+  }
+}
+
+
+// ── 6.4 Category hero styling ──────────────────────────────
+
+.marca-chile-toolkit .marca-chile-cover__img {
+
+  // 6.4.5 Hero heights
+  height: 326px;
+  min-height: 326px;
+
+  // 6.4.4 Center the block vertically
+  &-caption.v-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+
+    // 6.4.1 White breadcrumb and H1+icon
+    .pathway {
+      position: static;
+      color: rgba($color-white, 0.7);
+      margin-bottom: 0;
+
+      strong {
+        color: $color-white;
+      }
+    }
+
+    // 6.4.2 H1 + icon with 16px gap
+    .hero-title-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      picture {
+        flex-shrink: 0;
+
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      h2, h1 {
+        color: $color-white;
+        margin-bottom: 0;
+      }
+    }
+
+    // 6.4.3 Distance between breadcrumb and H1+icon
+    .pathway + .hero-title-row,
+    .pathway + h2,
+    .pathway + h1 {
+      margin-top: 48px;
+    }
+  }
+}
+
+// 6.4.5 Hero height responsive
+@include respond-to($bp-xxl) {
+  .marca-chile-toolkit .marca-chile-cover__img {
+    height: 278px;
+    min-height: 278px;
+
+    &-caption.v-12 {
+      .pathway + .hero-title-row,
+      .pathway + h2,
+      .pathway + h1 {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@include respond-to($bp-md) {
+  .marca-chile-toolkit .marca-chile-cover__img {
+    height: 206px;
+    min-height: 206px;
+
+    &-caption.v-12 {
+      padding: $spacing-base;
+
+      .pathway + .hero-title-row,
+      .pathway + h2,
+      .pathway + h1 {
+        margin-top: 38px;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+@include respond-to($bp-sm) {
+  .marca-chile-toolkit .marca-chile-cover__img {
+    height: 166px;
+    min-height: 166px;
+
+    &-caption.v-12 {
+      padding: $spacing-md;
+
+      .pathway + .hero-title-row,
+      .pathway + h2,
+      .pathway + h1 {
+        margin-top: 24px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+}
+
+
+// ── 6.5 Profile page ───────────────────────────────────────
+
+.marca-chile-toolkit .profile-section {
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  .field-label {
+    font-family: $font-primary;
+    font-size: 1.3rem;
+    color: $color-grey-light;
+    margin-bottom: 0.6rem;
+  }
+
+  .field-input {
+    border: 1px solid #E8E8E8;
+
+    &:focus {
+      border-color: $color-red;
+    }
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    font-family: $font-primary-bold;
+    font-size: $font-size-base;
+    color: $color-white;
+    background-color: $color-red;
+    border: none;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: #c40325;
+    }
+  }
+}

@@ -1,0 +1,893 @@
+// Desktop
+.marca-chile-made-by-chileans {
+
+    .menu-mbc {
+        top: 9.5rem;
+        padding: 1.4rem 6rem;
+
+        .nav-mbc {
+            ul {
+                li {
+                    a {
+                        font-size: 1.56rem;
+                        text-decoration: none;
+
+                        &.activo {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .login-mbc {
+            a {
+                font-size: 1.56rem;
+                text-decoration: none;
+                display: inline-flex;
+
+                &:nth-child(1) {
+
+                    img {
+                        width: 2rem;
+                        margin-right: .8rem;
+                    }
+
+                }
+
+                &:nth-child(2) {
+
+                    img {
+                        width: 1.6rem;
+                        margin-right: .8rem;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    .hero-mbc {
+        margin-top: 7rem;
+
+        .wrap2 {
+            padding: 0 8rem;
+
+            .texto-hero {
+                width: 46%;
+                padding-right: 0.5rem;
+
+                .ic-play {
+                    &.mobile {
+                        display: none;
+                    }
+                }                
+
+                p {
+                    font-size: 2.2rem;
+                    line-height: 3rem;
+                }
+
+                .box-usa-marca {
+                    padding: 1.5rem 1.5rem 2.4rem;
+
+                    .head-usa {
+                        h1 {
+                            font-size: 2.4rem !important;
+                            line-height: 4.5rem;
+                            margin-bottom: 1rem;
+
+                            &:after {
+                                width: 145px;
+                                height: 1.5px;
+                            }
+
+                        }
+
+                        p {
+                            font-size: 2.05rem;
+                            line-height: 2.9rem;
+                            width: 69%;
+                        }
+
+                    }
+
+                    .btn-enviar {
+                        font-size: 1.6rem;
+                        text-decoration: none;
+                        padding: 8px 24px;
+                        margin-top: 2.4rem;
+                    }
+
+                }
+
+            }
+
+            .ic-play {
+                &.desktop {
+                    width: calc(100% - 65rem);
+
+                    img {
+                        width: 6.7rem;
+                    }
+                }
+            }  
+        }
+    }
+
+    .cifras-mbc {
+        padding: 7.2rem 14rem;
+
+        .w-cifras {
+            .boxes-cifras {
+                .box-cifra {
+                    flex-wrap: wrap;
+                    flex: 0 0 auto;
+                    width: 32%;  
+                    padding: 2rem .7rem;
+
+                    h4 {
+                        font-size: 2.4rem;
+                        font-family: $font-family-primary-extrabold;
+                        margin-right: .7rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .cifras-2 {
+                padding: 1.2rem 2.4rem;
+
+                .item-cifra2 {
+                    flex: 1 0 0%;
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+
+                    .texto {
+                        margin-left: 1.2rem;
+
+                        h4 {
+                            font-size: 4.2rem;
+                            font-family: $font-family-primary-extrabold;
+                            margin-right: 1.2rem;
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    &:first-child {
+                        padding-right: 2.2rem !important;
+                        margin-right: 0 !important;
+                    }
+
+                    &:last-child {
+                        padding-left: 2.2rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .beneficios-mbc {
+        padding: 7rem 0 3rem;
+
+        .wrap2 {
+            padding: 0 8rem;
+
+            h2 {
+                font-family: $font-family-primary-light;
+                font-size: 4.8rem;
+                margin-bottom: 6.5rem;
+            }
+
+            .box-ben-mbc {
+                padding: 4.2rem 4.8em 2.8rem 2.4rem;
+                margin-top: 2.4rem;
+
+                .categoria {
+                    font-size: 1.5rem;
+                    padding: 1.2rem 2.4rem;
+                    left: 2.4rem;
+                    top: -1.4rem;
+                }
+
+                p {
+                    font-size: 1.58rem;
+                    margin-bottom: 3rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                h5 {
+                    font-size: 1.63rem;
+                    line-height: 1.9rem;
+                }
+
+                ul {
+                    margin-top: 1.8rem;
+
+                    li {
+                        font-size: 1.58rem;
+                        line-height: 1.8rem;
+                        margin-bottom: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .podcast-mbc {
+        padding: 8.5rem 0;
+
+        .wrap {
+            padding: 0 22.8rem;
+
+            .titulo-podcast {
+                justify-content: space-between;
+                margin-bottom: 6rem;
+
+                h2 {
+                    font-size: 7rem;
+                    margin-right: 6.5rem;
+                }
+
+                p {
+                    font-size: 2.04rem;
+                    line-height: 2.2rem;
+                    width: 62%;
+
+                    span {
+                        font-size: 1.8rem;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+            .cards {
+                .card {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .conocelos-mbc {
+        .texto-conocelos {
+            width: 65%;
+            margin-bottom: 10rem;
+
+            h2 {
+                font-size: 4rem;
+                line-height: 5.2rem;
+                margin-bottom: 3.8rem;
+            }
+
+            p {
+                font-family: $font-family-primary-light;
+                font-size: 2.5rem;
+                line-height: 3rem;
+                margin-bottom: 2.6rem;
+            }
+        }
+
+        .filtro-conocelos {
+            padding: 3rem 0;
+
+            .wrap2 {
+                padding: 0 8rem;
+
+                p {
+                    font-size: 2.47rem;
+                    width: 23%;
+                    padding-left: 2.5rem;
+                    margin-right: 3rem;
+                }
+
+                .filtros-mbc {
+                    .w-input {
+                        .w-filtro-lic {
+                            width: 240px;
+                            margin-left: 2.6rem;
+
+                            label {
+                                font-size: 2.1rem;
+                            }
+
+                            .filtros-select-sector {
+                                margin-bottom: .5rem;
+
+                                .activo {
+                                    font-size: 1.8rem;
+                                    height: 5rem;
+                                    background-size: 2.4rem auto;
+                                    padding: .7rem 1.5rem;
+                                    margin-bottom: .5rem;
+                                }
+
+                                .lista-sector {
+                                    top: 8.5rem;
+
+                                    .item-select {
+                                        font-size: 1.8rem;
+                                        line-height: 2rem;
+                                        color: #707070;
+                                        padding: 0.8rem 1.7rem;
+                                    }
+                                }
+                            }
+
+                            .filtros-select-subsector {
+                                margin-bottom: .5rem;
+
+                                .activo {
+                                    font-size: 1.8rem;
+                                    height: 5rem;
+                                    background-size: 2.4rem auto;
+                                    padding: .7rem 1.5rem;
+                                    margin-bottom: .5rem;
+                                }
+
+                                .lista-subsector {
+                                    top: 8.5rem;
+
+                                    .item-select {
+                                        font-size: 1.8rem;
+                                        line-height: 2rem;
+                                        color: #707070;
+                                        padding: 0.8rem 1.7rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .botones {
+                        .btn-buscar {
+                            font-size: 2.1rem;
+                            padding: 2.4rem 4.8rem;
+                            margin-left: 7rem;
+                        }
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            font-size: 2.1rem;
+                            font-weight: bold;
+                            text-align: center;
+                            text-decoration: none;
+                            color: #EB0028;
+                            background-color: #FFF;
+                            border: none;
+                            border-radius: 4px;
+                            padding: 1rem 2.8rem;
+                            margin-left: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .carrusel-conocelos {
+            padding: 7.2rem 0;
+        }
+    }
+
+    .faq-mbc {
+        .wrap2 {
+            padding: 0 8rem;
+
+            .titulo-faq {
+                h2 {
+                    font-size: 4rem;
+                    margin-right: 4rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    line-height: 2.7rem;
+                    width: 47%;
+                }
+            }
+
+            .accordion {
+                .item-ac {
+                    .button {
+                        font-size: 2.1rem;
+
+                        &::after {
+                            font-size: 1.7rem;
+                            width: 2.8rem;
+                            height: 2.8rem;
+                        }
+                    }
+
+                    .int-ac {
+                        p {
+                            font-size: 2.1rem;
+                            line-height: 2.9rem;
+                            color: #707070;
+                        }
+
+                        ul {
+                            padding-left: 5.4rem;
+                            margin-top: 3.4rem;
+                            margin-bottom: 3rem;
+
+                            li {
+                                font-size: 2.1rem;
+                                line-height: 2.9rem;
+                                color: #707070;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-made-by-chileans {
+        .btn-mbc-mobile {
+            top: 9.8rem;
+
+            .btn-sumate {
+                display: inline-flex;
+                font-size: 1.3rem;
+                text-decoration: none;
+                padding: .3rem 1.2rem;
+            }
+
+            .btn-mbc {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 32px;
+                height: 32px;
+
+                i {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        .menu-mobile-mbc {
+            padding: 5rem 1.5rem 1rem;
+
+            .cerrar-menu-mbc {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            ul {
+                margin: 4rem 0 5rem;
+
+                li {
+                    padding-left: 1.8rem;
+
+                    a {
+                        font-size: 2.1rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .btn-sumate {
+                display: inline-flex;
+                font-size: 1.3rem;
+                text-decoration: none;
+                padding: .3rem 1.2rem;
+            }
+
+            .redes-menu {
+                bottom: 1.7rem;
+                left: 1.5rem;
+
+                p {
+                    font-size: 1.12rem;
+                }
+
+                .rrss {
+                    a {
+                        text-decoration: none;
+                        margin-right: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .hero-mbc {
+            margin-top: 3rem;
+
+            .wrap2 {
+                .texto-hero {
+                    width: 100%;
+                    position: absolute;
+                    z-index: 10;
+                    top: 0;
+                    left: 0;
+                    padding-top: 8rem;
+
+                    .ic-play {
+                        &.mobile {
+                            display: flex;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 1.8rem;
+                    }
+
+                }
+
+                .ic-play {
+                    &.desktop {
+                        display: none;
+                    }
+                }  
+
+            }
+
+            .box-usa-marca {
+                &.mobile {
+                    padding: 1.2rem 0.5rem 1.5rem;
+
+                    .head-usa {
+                        h1 {
+                            font-size: 1.7rem !important;
+                            line-height: 2.8rem;
+                            margin-bottom: 0.8rem;
+
+                            &:after {
+                                width: 9rem;
+                            }
+
+                        }
+
+                        p {
+                            font-size: .8rem;
+                            line-height: 1rem;
+                            width: 84%;
+                        }
+                    }
+
+                    .btn-enviar {
+                        line-height: 1.2rem;
+                        text-decoration: none;
+                        padding: 0.3rem 1.4rem;
+                        margin-top: 1.9rem;
+                    }
+                }
+            }
+        }
+
+        .cifras-mbc {
+            padding: 5rem 1rem 5rem;
+
+            .w-cifras {
+                .boxes-cifras {
+                    flex-wrap: wrap;
+                    
+                    .box-cifra {
+                        flex-shrink: 0;
+                        width: 100%;
+                        max-width: 100%;  
+                        padding: 1rem 1rem;
+                        margin-bottom: 1rem;
+
+                        h4 {
+                            font-size: 2.6rem;
+                            margin-right: .8rem;
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                .cifras-2 {
+                    flex-direction: column;
+                    padding: 1.4rem 4rem;
+
+                    .item-cifra2 {
+                        width: 100%;
+
+                        p {
+                            font-size: 1.2rem;
+                        }
+
+                        .texto {
+                            margin-left: 0;
+
+                            h4 {
+                                font-size: 2.8rem;
+                                font-family: Chilena ExtraBold;
+                                margin-right: 1.2rem;
+                            }
+
+                            p {
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        &:first-child {
+                            padding-right: 0 !important;
+                            padding-bottom: 1rem;
+                            margin-right: 0 !important;
+                            margin-bottom: 1.5rem;
+                            border-bottom: 2px solid $marca-chile-color-light-grey !important;
+                        }
+
+                        &:last-child {
+                            padding-left: 0 !important;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .beneficios-mbc {
+            padding: 3.8rem 0;
+
+            .wrap2 {
+                padding: 0 1.4rem;
+
+                h2 {
+                    font-size: 2.5rem;
+                    line-height: 2.4rem;
+                    margin-bottom: 2.1rem;
+                }
+
+                .box-ben-mbc {
+                    padding: 2.6rem 3.4rem 1.8rem 1.8rem;
+                    margin-top: 2rem;
+
+                    .categoria {
+                        font-size: 1.05rem;
+                        left: 1.8rem;
+                        padding: .8rem 1.7rem;
+                    }
+
+                    p {
+                        font-size: 1.12rem;
+                        line-height: 1.6rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    h5 {
+                        font-size: 1.15rem;
+                        line-height: 1.4rem;
+                    }
+
+                    ul {
+                        li {
+                            font-size: 1.15rem;
+                            line-height: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .podcast-mbc {
+            padding: 3rem 0 3.6rem;
+
+            .wrap {
+                padding: 0 1.5rem;
+
+                .titulo-podcast {
+                    margin-bottom: 2rem;
+
+                    h2 {
+                        font-size: 3rem;
+                        margin-right: 6.5rem;
+                        margin-bottom: 1.14rem;
+                    }
+
+                    p {
+                        font-family: $font-family-primary-light;
+                        font-size: 1.04rem;
+                        line-height: 1.14rem;
+                        width: 100%;
+                        margin: 0;
+
+                        span {
+                            font-size: 1.3rem;
+                            line-height: 1.24rem;
+                            margin-top: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .conocelos-mbc {
+            padding-top: 4.8rem;
+
+            .texto-conocelos {
+                width: 100%;
+                padding: 0 2.8rem 1.8rem;
+                margin-bottom: 0;
+
+                h2 {
+                    font-size: 2.5rem;
+                    line-height: 3.2rem;
+                    margin-bottom: 1.2rem;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    line-height: 1.8rem;
+                    margin-bottom: 1.2rem;
+                }
+            }
+
+            .filtro-conocelos {
+                padding: 1.8rem 0;
+
+                .wrap2 {
+                    padding: 0 1.5rem;
+
+                    p {
+                        font-size: 1.36rem;
+                        width: 100%;
+                        padding: 0;
+                        margin: 0 0 .5rem;
+                    }
+
+                    .filtros-mbc {
+                        .w-input {
+                            display: inline-flex;
+                            justify-content: space-between;
+
+                            .w-filtro-lic {
+                                width: 48%;
+                                margin: 0;
+
+                                label {
+                                    font-size: 1.6rem;
+                                    margin-bottom: 0.6rem;
+                                }
+
+                                .filtros-select-sector {
+                                    .activo {
+                                        font-size: 1.4rem;
+                                        height: 3.6rem;
+                                        background-size: 1.6rem auto;
+                                        margin-bottom: 0.8rem !important;
+                                    }
+
+                                    .lista-sector {
+                                        top: 6.5rem;
+
+                                        .item-select {
+                                            font-size: 1.2rem;
+                                            padding: .3rem .7rem;
+                                        }
+                                    }
+
+                                }
+
+                                .filtros-select-subsector {
+                                    .activo {
+                                        font-size: 1.4rem;
+                                        height: 3.6rem;
+                                        background-size: 1.6rem auto;
+                                        margin-bottom: 0.8rem !important;
+                                    }
+
+                                    .lista-subsector {
+                                        top: 6.5rem;
+
+                                        .item-select {
+                                            font-size: 1.2rem;
+                                            padding: .3rem .7rem;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .botones {
+                            display: inline-flex;
+                            justify-content: space-between;
+                            width: 100%;
+
+                            .btn-buscar {
+                                justify-content: center;
+                                font-size: 1.6rem;
+                                width: 48%;
+                                padding: 1.4rem 1.8rem;
+                                margin: 0 0 0.8rem;
+                            }
+
+                            a {
+                                justify-content: center;
+                                font-size: 1.6rem;
+                                width: 48%;
+                                padding: 1.4rem 1.8rem;
+                                margin: 0 0 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .carrusel-conocelos {
+                padding: 4.2rem 0;
+            }
+        }
+
+        .faq-mbc {
+            padding: 2rem 0 8rem;
+
+            .wrap2 {
+                padding: 0 2rem;
+
+                .titulo-faq {
+                    h2 {
+                        font-size: 2.2rem;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 1.05rem;
+                        line-height: 1.6rem;
+                        width: 100%;
+                    }
+                }
+
+                .accordion {
+                    >.row {
+                        >div {
+                            padding: 0;
+                        }
+                    }
+
+                    .item-ac {
+                        .button {
+                            font-size: 1.05rem;
+                            line-height: 1.6rem;
+
+                            &:after {
+                                font-size: 1rem;
+                                width: 1.9rem;
+                                height: 1.9rem;
+                            }
+
+                        }
+
+                        .int-ac {
+                            p {
+                                font-size: 1.1rem;
+                                line-height: 1.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

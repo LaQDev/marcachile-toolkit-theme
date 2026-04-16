@@ -1,0 +1,835 @@
+// Desktop
+.marca-chile-cover {
+    position: relative;
+
+    &__slider {
+        .splide {
+            &__track {
+                .splide__slide {
+                    position: relative;
+                }
+            }
+
+            &__pagination {
+                left: 10rem;
+                bottom: 2rem;
+                width: auto;
+                transform: none;
+
+                &__page {
+                    width: 12px;
+                    height: 12px;
+                    background-color: $marca-chile-color-white;
+                    border-radius: 0;
+                    opacity: 0.7;
+
+                    &.is-active {
+                        transform: none;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &-caption {
+            position: absolute;
+            bottom: 20rem;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            color: $marca-chile-color-white;
+        }
+    }
+
+    &__text {
+        color: $marca-chile-color-black;
+        padding: 16.8rem 0 5.4rem;
+
+        &-title {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            h1 {
+                margin-bottom: 8rem;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                color: $marca-chile-color-black;
+                margin: 0 0 3.8rem;
+            }
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            h4 {
+                color: $marca-chile-color-red;
+                margin-bottom: 2.2rem;
+            }
+
+            h5 {
+                font-size: 2.2rem;
+                text-transform: uppercase;
+                color: $marca-chile-color-black;
+                margin: 0 0 3.8rem;
+            }
+
+            p {
+                font-family: $font-family-primary-light;
+                color: $marca-chile-color-grey;
+            }
+
+            &.v-02 {
+                h2 {
+                    margin-bottom: 0;
+                }
+
+                h3 {
+                    margin-bottom: 1.5rem;
+
+                    span {
+                        font-family: $font-family-primary;
+                    }
+
+                }
+            }
+
+            &.v-03 {
+                h2 {
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    width: 75%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+
+            &.v-04 {
+                padding: 0 6rem;
+
+                h1 {
+                    font-size: 5rem;
+                    text-transform: uppercase;
+                    color: #000100;
+                    width: 100%;
+                    margin: 0 auto 3.8rem;
+                }
+
+                h2 {
+                    width: 50%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+
+            &.v-05 {
+                h5 {
+                    margin: 0 0 2rem;
+                }
+            }
+
+            //noticia title
+            &.v-06 {
+                text-align: left;
+
+                h1 {
+                    color: $marca-chile-color-black;
+                    width: 100%;
+                    margin: 0 auto 3.8rem;
+                }
+
+                h4 {
+                    font-family: $font-family-primary;
+                    font-size: 1.4rem;
+                    color: $marca-chile-color-red;
+                    margin-bottom: 2.2rem;
+
+                    span {
+                        font-family: $font-family-primary-light;
+                        color: $marca-chile-color-light-grey;
+                    }
+                }
+
+                h6 {
+                    span {
+                        font-family: $font-family-primary-bold;
+                        color: $marca-chile-color-red;
+                    }
+                }
+
+                p {
+                    font-family: $font-family-primary-light;
+                    color: $marca-chile-color-light-grey;
+                }
+            }
+
+            //blog title
+            &.v-07 {
+
+                h2 {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    color: $marca-chile-color-black;
+                    margin: 0 auto 3.8rem;
+
+                    span {
+                        font-family: $font-family-primary-bold;
+                        font-size: 9.2rem;
+                        color: $marca-chile-color-white;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: $marca-chile-color-light-grey;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        bottom: 4px;
+                        right: -16px;
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background-color: $marca-chile-color-red;
+                        margin: auto;
+                    }
+                }
+
+                h4 {
+                    color: $marca-chile-color-red;
+                    margin-bottom: 2.2rem;
+                }
+
+                p {
+                    color: $marca-chile-color-grey;
+                }
+            }
+
+        }
+
+        //resultado - noticia - blog
+        &.v-02 {
+            color: $marca-chile-color-black;
+            padding: 16.8rem 0 5.4rem;
+        }
+    }
+
+    &__img {
+
+        &-caption {
+            position: absolute;
+            bottom: 20rem;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            color: $marca-chile-color-white;
+
+            //quienes somos
+            &.v-02 {
+                flex-direction: column;
+                right: 0;
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+
+                h2 {
+                    text-transform: uppercase;
+                    margin-bottom: 4.2rem;
+                }
+
+                p {
+                    font-family: $font-family-primary-light;
+                }
+
+            }
+
+            //blog
+            &.v-03 {
+                flex-direction: column;
+                right: 0;
+                bottom: -8rem;
+                width: 56.66666667%;
+                color: $marca-chile-color-grey;
+                background-color: $marca-chile-color-white;
+                box-shadow: 0 .5rem 1rem rgba($color: $marca-chile-color-black, $alpha: .5);
+                padding: 3rem;
+                margin-right: auto;
+                margin-left: auto;
+
+                h6 {
+                    position: relative;
+                    font-family: Chilena;
+                    font-size: 1.6rem;
+                    color: $marca-chile-color-light-grey;
+                    margin-bottom: 1rem;
+
+                    span {
+                        position: relative;
+                        font-family: Chilena;
+                        font-size: 1.6rem;
+                        margin-left: 4rem;
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: -22px;
+                            content: "";
+                            width: 5px;
+                            height: 5px;
+                            background-color: $marca-chile-color-light-grey;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .blog-author {
+                    display: inline-flex;
+
+                    picture {
+                        margin-right: 1rem;
+
+                        img {
+                            border-radius: 100%;
+                        }
+                    }
+
+                    p {
+                        display: flex;
+                        align-items: center;
+                        font-family: Chilena Light;
+                        color: $marca-chile-color-grey;
+                        margin-bottom: 0;
+
+                        span {
+                            font-family: Chilena Light;
+                            margin-left: 1rem;
+                        }
+                    }
+
+                }
+            }
+
+            //portal
+            &.v-04 {
+                flex-direction: column;
+                right: 0;
+                bottom: 0;
+                flex-wrap: wrap;
+                flex-direction: initial;
+                align-items: flex-start;
+                width: 30%;
+                height: 100%;
+                color: $marca-chile-color-black;
+                background-color: $marca-chile-color-white;
+                border-left: 8px solid $marca-chile-color-red;
+                padding: 12rem 4rem 2rem;
+                margin-right: 16rem;
+                margin-left: auto;
+
+                h3 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    width: 100%;
+                    font-size: 3.8rem;
+                    margin-bottom: 3rem;
+
+                    span {
+                        font-family: $font-family-primary;
+                    }
+                }
+            }
+
+            //home middle
+            &.v-05 {
+                width: 50%;
+            }
+
+            //chile sustentable
+            &.v-06 {
+                top: 19rem;
+                right: 0;
+                bottom: auto;
+                flex-direction: column;
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+
+                p {
+                    text-align: left;
+                    margin: 10rem 10rem 0;
+                    color: $marca-chile-color-white;
+                    border-left: 5px solid $marca-chile-color-white;
+                    padding-left: 2rem;
+                }
+
+            }
+
+            //quienes somos final
+            &.v-07 {
+                bottom: initial;
+                top: 18rem;
+                flex-direction: column;
+                right: 0;
+                width: 38%;
+                margin-right: auto;
+                margin-left: auto;
+
+                h2 {
+                    text-transform: uppercase;
+                    margin-bottom: 3rem;
+                }
+
+                p {
+                    font-family: $font-family-primary-light;
+                }
+            }
+
+            //404
+            &.v-08 {
+                flex-direction: column;
+                right: 0;
+                bottom: 0;
+                flex-wrap: wrap;
+                flex-direction: initial;
+                align-content: center;
+                width: 30%;
+                height: 100%;
+                color: $marca-chile-color-white;
+                padding: 16rem 4rem 2rem;
+                margin: auto;
+
+                h1 {
+                    font-size: 15rem;
+                    margin-bottom: 6rem;
+                }
+
+                h3 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 3rem;
+
+                    span {
+                        font-size: 3.8rem;
+                        font-family: $font-family-primary-light;
+                    }
+                }
+
+                p {
+                    font-family: $font-family-primary-light;
+                    margin-bottom: 6rem;
+                }
+            }
+
+            //fix v-06
+            &.v-09 {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: fit-content;
+
+                h6 {
+                    font-family: $font-family-primary;
+                }
+            }
+
+            &.v-10 {
+                top: auto;
+                bottom: 3rem;
+
+                p {
+                    text-align: left;
+                    margin: 0 10rem;
+                    color: #ffffff;
+                    border-left: 5px solid #ffffff;
+                    padding-left: 2rem;
+                }
+            }
+
+            //home middle - chile sustentable
+            &-text {
+                width: 548px;
+            }
+
+            //home middle
+            &-info {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: auto;
+                bottom: 0;
+                z-index: 2;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-content: flex-start;
+                width: 35%;
+                height: 85%;
+                color: $marca-chile-color-white;
+                background-color: $marca-chile-color-red;
+                padding: 6rem 5rem;
+                margin: auto;
+
+                p {
+                    font-family: $font-family-primary-light;
+                    margin-bottom: 4.2rem;
+                }
+
+                span {
+                    font-family: $font-family-primary-light;
+                }
+
+            }
+
+        }
+
+        .marca-chile-cover__img-caption-box-color {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -16rem;
+
+            .col-red {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                width: 41.66666667%;
+                color: $marca-chile-color-white;
+                background-color: $marca-chile-color-red;
+                padding: 3rem 8rem 3rem 12rem;
+
+            }
+
+            .col-blue {
+                display: flex;
+                flex-wrap: wrap;
+                width: 58.33333333%;
+                color: $marca-chile-color-white;
+                background-color: $marca-chile-color-blue;
+                margin-top: 16rem;
+
+                &-v-01 {
+                    width: 41.66666667%;
+                    padding: 3rem 8rem 3rem 3rem;
+                }
+
+                &-v-02 {
+                    width: 58.33333333%;
+                    padding: 3rem 12rem 3rem 3rem;
+                }
+
+            }
+
+            h4 {
+                line-height: 3.6rem;
+            }
+
+            h6 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-family: $font-family-primary-light;
+            }
+
+        }
+
+    }
+
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-cover {
+
+        &__slider {
+            .splide {
+                &__pagination {
+                    right: 0;
+                    left: 0;
+                }
+            }
+
+            &-caption {
+                bottom: initial;
+                top: 26rem;
+            }
+        }
+
+        &__text {
+            padding: 16.8rem 1.5rem 5.4rem;
+
+            &-title {
+
+                h1 {
+                    font-size: 3.6rem;
+                    margin-bottom: 4rem;
+                }
+
+                &.v-04 {
+                    h2 {
+                        font-size: 3.8rem;
+                        width: 100%;
+                    }
+                }
+
+                //noticia title
+                &.v-06 {
+                    h1 {
+                        font-size: 4rem;
+                        line-height: 5rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                //blog title
+                &.v-07 {
+                    h2 {
+                        line-height: 6rem;
+
+                        &::after {
+                            right: 24px;
+                        }
+                    }
+                }
+
+            }
+
+            //resultado - noticia - blog
+            &.v-02 {
+                padding: 16.8rem 0 0;
+            }
+
+        }
+
+        &__img {
+            padding: 0;
+            margin-bottom: 4rem;
+
+            &-caption {
+                top: 6rem;
+
+                //segundo caption
+                bottom: initial;
+                top: 26rem;
+
+                //quienes somos
+                &.v-02 {
+                    top: 12rem;
+                    width: 100%;
+
+                    h2 {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                //blog
+                &.v-03 {
+                    top: initial;
+                    bottom: -16rem;
+                    width: 90%;
+
+                    h3 {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                //portal
+                &.v-04 {
+                    position: relative;
+                    top: initial;
+                    right: initial;
+                    bottom: initial;
+                    left: initial;
+                    width: 100%;
+                    height: fit-content;
+                    order: 2;
+                    margin: auto;
+                }
+
+                //home middle
+                &.v-05 {
+                    top: initial;
+                    right: 0;
+                    bottom: 14rem;
+                    left: 0;
+                    width: 84%;
+                    margin: auto;
+                }
+
+                //chile sustentable
+                &.v-06 {
+                    top: 0;
+                    bottom: initial;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    width: 94%;
+                    height: 100%;
+                    padding: 6rem 1rem 2rem;
+
+                    h1 {
+                        font-size: 4.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    h6 {
+                        font-family: $font-family-primary-light;
+                    }
+
+                    p {
+                        font-family: $font-family-primary-light;
+                        margin: 2rem 0 0;
+                    }
+                }
+
+                //quienes somos final
+                &.v-07 {
+                    top: 5rem;
+                    width: 90%;
+                }
+
+                //404
+                &.v-08 {
+                    top: initial;
+                    right: initial;
+                    bottom: initial;
+                    left: initial;
+                    width: 100%;
+                    height: fit-content;
+                    order: 2;
+                    margin: auto;
+                }
+
+                //fix v-06
+                &.v-09 {
+                    top: 0;
+                    right: 0;
+                    bottom: initial;
+                    left: 0;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    width: 94%;
+                    padding: 6rem 1rem 2rem;
+
+                    h6 {
+                        font-family: $font-family-primary-light;
+                    }
+                }
+
+                &.v-10 {
+                    top: initial;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 94%;
+                    padding: 6rem 1rem 2rem;
+                    margin: auto;
+
+                    p {
+                        font-family: Chilena Light;
+                        margin: 2rem 0 0;
+                    }
+                }
+
+                //home middle - chile sustentable
+                &-text {
+                    text-align: left;
+                    width: 100%;
+                }
+
+                //home middle
+                &-info {
+                    top: 4rem;
+                    right: 0;
+                    bottom: auto;
+                    width: 94%;
+                    height: fit-content;
+                    padding: 2rem 4rem 2rem 2rem;
+
+                    h1 {
+                        font-size: 5rem;
+                        line-height: 4.5rem;
+                        margin-bottom: 2rem;
+                        width: 100%;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                        line-height: 2.4rem;
+                    }
+
+                }
+
+            }
+
+            &.v-02 {
+                margin-top: 10rem;
+
+                .row {
+                    >.col {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+
+            .marca-chile-cover__img-caption-box-color {
+                margin-top: 0;
+
+                .col-red {
+                    width: 100%;
+                    padding: 4rem 2rem;
+                }
+
+                .col-blue {
+                    width: 100%;
+                    padding: 0;
+                    margin-top: 0;
+
+                    &-v-01 {
+                        width: 100%;
+                        padding: 4rem 2rem;
+                    }
+
+                    &-v-02 {
+                        width: 100%;
+                        padding: 4rem 2rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
+// ── FIX HERO MOBILE (ETAPA 2) ──────────────────────────────
+// Agregado al final para asegurar prioridad sobre reglas anteriores
+@media screen and (max-width: 991px) {
+    .marca-chile-toolkit>.marca-chile-cover__img.v-02 {
+        margin-top: 10vh !important;
+    }
+}

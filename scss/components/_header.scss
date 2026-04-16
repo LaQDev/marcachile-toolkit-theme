@@ -1,0 +1,1278 @@
+// Desktop
+.marca-chile-header {
+
+    //header home
+    &__home {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1030;
+
+        .navbar {
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.5rem 3.5rem;
+
+            .marca-chile-header__home {
+
+                &-submenu {
+                    display: flex;
+                    flex-direction: row;
+        
+                    .navbar-toggler {
+                        border: none;
+                        appearance: none;
+                        margin-right: 3rem;
+        
+                        &:focus:not(:focus-visible) {
+                            box-shadow: none;
+                        }
+        
+                        &-icon {
+                            width: 2.3rem;
+                            height: 2.2rem;
+                            background-image: url("../images/ico/ico-toggle-blanco.svg");
+                            transition: all ease .4s;
+                        }
+        
+                        &:hover {
+        
+                            .navbar-toggler-icon {
+                                background-image: url("../images/ico/ico-toggle-rojo.svg");
+                                transition: all ease .4s;
+                            }
+        
+                        }
+                    }
+
+                    .offcanvas {
+                        width: 638px;
+                        z-index: 9999;
+                        transition: transform .6s ease-in-out;
+        
+                        &-header {
+                            justify-content: flex-start;
+                            padding: 15px 84px 15px 42px;
+        
+                            .btn-close {
+                                background-image: url("../images/ico/ico-close-color.svg");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                width: 18px;
+                                height: 18px;
+                                opacity: 1;
+                                padding: 0;
+                                margin: 0 4.2rem 0 0;
+        
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+        
+                        &-body {
+                            padding: 6.5rem 1.4rem 0 4.2rem;
+        
+                            .navbar-nav {
+                                &-top {
+                                    padding-left: 5.8rem;
+        
+                                    li {
+                                        padding: 0 0 2.85rem;
+        
+                                        a {
+                                            position: relative;
+                                            font-family: $font-family-primary-bold;
+                                            font-size: 3rem;
+                                            line-height: 3rem;
+                                            color: $marca-chile-color-grey;
+                                            opacity: 1;
+                                            width: fit-content;
+                                            transition: none;
+                                            padding: 0;
+        
+                                            &::after {
+                                                content: "";
+                                                position: absolute;
+                                                bottom: 0;
+                                                right: -16px;
+                                                display: none;
+                                                width: 8px;
+                                                height: 8px;
+                                                background-color: $marca-chile-color-red;
+                                                transition: all ease .4s;
+                                            }
+        
+                                            &:hover {
+                                                color: $marca-chile-color-grey;
+                                                opacity: 1;
+                                                transition: none;
+        
+                                                &::after {
+                                                    display: flex;
+                                                    transition: all ease .4s;
+                                                }
+                                            }
+        
+                                            &.active {
+                                                color: $marca-chile-color-grey;
+                                                opacity: 1;
+                                                transition: none;
+        
+                                                &::after {
+                                                    display: flex;
+                                                    transition: all ease .4s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+        
+                                &-bottom {
+                                    flex-wrap: wrap;
+                                    flex-direction: initial;
+                                    padding-left: 5.8rem;
+        
+                                    li {
+                                        padding: 1.5rem 2.4rem 1.5rem 0;
+        
+                                        a {
+                                            font-family: $font-family-primary;
+                                            font-size: 1.6rem;
+                                            line-height: 1.6rem;
+                                            color: $marca-chile-color-light-grey;
+                                            border-right: 2px solid $marca-chile-color-red;
+                                            padding: 0 2.4rem 0 0;
+                                            transition: all ease .4s;
+        
+                                            &:hover {
+                                                color: $marca-chile-color-red;
+                                                transition: all ease .4s;
+                                            }
+        
+                                            &.active {
+                                                color: $marca-chile-color-red;
+                                                transition: all ease .4s;
+                                            }
+                                        }
+        
+                                        &:last-child {
+                                            a {
+                                                border-right: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .navbar-brand {
+                        display: flex;
+        
+                        &-logo {
+                            background-image: url("../images/logo/ico-logo-blanco.svg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 145px;
+                            height: 79px;
+                        }
+                    }
+
+                }
+        
+                &-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+        
+                    .navbar-nav {
+                        flex-direction: row;
+        
+                        li {
+                            a {
+                                font-family: $font-family-primary;
+                                font-size: 1.6rem;
+                                color: $marca-chile-color-white;
+                                padding-right: 1rem;
+                                padding-left: 1rem;
+                                transition: all ease .4s;
+        
+                                strong {
+                                    font-family: $font-family-primary-bold;
+                                }
+        
+                                &:hover {
+                                    color: $marca-chile-color-red;
+                                    transition: all ease .4s;
+                                }
+        
+                                &.active {
+                                    color: $marca-chile-color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                &-btn {
+                    display: flex;
+                    flex-direction: row;
+        
+                    &-search {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        appearance: none;
+                        background-color: transparent;
+                        border: none;
+                        padding: 0 1.5rem;
+        
+                        &-ico {
+                            width: 12px;
+                            height: 12px;
+                            background-image: url("../images/ico/ico-search-blanco.svg");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            transition: all ease .4s;
+                        }
+        
+                        &:hover {
+        
+                            .marca-chile-header__home-btn-search-ico {
+                                background-image: url("../images/ico/ico-search-rojo.svg");
+                                transition: all ease .4s;
+                            }
+        
+                        }
+                    }
+        
+                    &-lang {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        font-size: 1.6rem;
+                        appearance: none;
+                        color: $marca-chile-color-white;
+                        background-color: transparent;
+                        border: none;
+                        padding: 0 1.5rem;
+                        transition: all ease .4s;
+        
+                        &-ico {
+                            width: 16px;
+                            height: 16px;
+                            background-image: url("../images/ico/ico-lang-blanco.svg");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            margin-right: 0.5rem;
+                            transition: all ease .4s;
+                        }
+        
+                        &:hover {
+                            color: $marca-chile-color-red;
+                            transition: all ease .4s;
+        
+                            .marca-chile-header__home-btn-lang-ico {
+                                background-image: url("../images/ico/ico-lang-rojo.svg");
+                            }
+        
+                        }
+                    }
+        
+                    &-portal {
+                        font-size: 16px;
+                        color: $marca-chile-color-white;
+                        text-decoration: none;
+                        padding: 0 1.5rem;
+                        transition: all ease .4s;
+        
+                        &:hover {
+                            color: $marca-chile-color-red;
+                            transition: all ease .4s;
+                        }
+        
+                    }
+                }
+
+            }
+
+        }
+
+        //header home scroll (modificaciones)
+        &.marca-chile-header__scroll {
+
+            .navbar {
+                background-color: transparent;
+                opacity: 0;
+                transform: translateY(-96px);
+                transition: all ease .4s;
+            }
+    
+            .marca-chile-header__home {
+
+                &-submenu {
+    
+                    .navbar-toggler {
+    
+                        &-icon {
+                            background-image: none;
+                        }
+        
+                        &:hover {
+        
+                            .navbar-toggler-icon {
+                                background-image: none;
+                            }
+        
+                        }
+        
+                    }
+        
+                    .navbar-brand {
+                        &-logo {
+                            background-image: none;
+                        }
+                    }
+
+                }
+    
+                &-links {
+                    .navbar-nav {
+                        flex-direction: row;
+
+                        li {
+                            a {
+                                color: transparent;
+                                transition: none;
+
+                                strong {
+                                    font-family: $font-family-primary-bold;
+                                }
+
+                                &:hover {
+                                    color: $marca-chile-color-red;
+                                    transition: all ease .4s;
+                                }
+
+                                &.active {
+                                    color: $marca-chile-color-red;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-btn {
+                    &-search {
+
+                        &-ico {
+                            background-image: none;
+                        }
+
+                        &:hover {
+
+                            .marca-chile-header__btn-search-ico {
+                                background-image: none;
+                            }
+
+                        }
+
+                    }
+
+                    &-lang {
+                        color: transparent;
+                        transition: none;
+
+                        &-ico {
+                            background-image: none;
+                        }
+
+                        &:hover {
+                            color: transparent;
+                            transition: none;
+
+                            .marca-chile-header__btn-lang-ico {
+                                background-image: none;
+                            }
+
+                        }
+
+                    }
+
+                    &-portal {
+                        color: transparent;
+                        transition: none;
+
+                        &:hover {
+                            color: transparent;   
+                            transition: none;                    
+                        }
+
+                        &.active {
+                            color: transparent; 
+                            transition: none;                      
+                        }
+                    }
+                }
+
+            }
+    
+            &.fixed--show {
+
+                .navbar {
+                    background-color: $marca-chile-color-white;
+                    opacity: 1;
+                    transform: initial;
+                    transition: all ease .4s;
+                }
+
+                .marca-chile-header__home {
+
+                    &-submenu {
+    
+                        .navbar-toggler {
+        
+                            &-icon {
+                                background-image: url("../images/ico/ico-toggle-negro.svg");
+                            }
+            
+                            &:hover {
+            
+                                .navbar-toggler-icon {
+                                    background-image: url("../images/ico/ico-toggle-rojo.svg");
+                                }
+            
+                            }
+            
+                        }
+
+                        .navbar-brand {
+                            &-logo {
+                                background-image: url("../images/logo/ico-logo-color.svg");
+                            }
+                        }                     
+    
+                    }
+
+
+                    &-links {
+                        .navbar-nav {
+
+                            li {
+                                a {                                        
+                                    color: $marca-chile-color-black;
+                                }
+                            }
+
+                        }
+                    }  
+
+                    &-btn {
+
+                        &-search {
+    
+                            &-ico {
+                                background-image: url("../images/ico/ico-search-negro.svg");
+                            }
+    
+                            &:hover {
+    
+                                .marca-chile-header__btn-search-ico {
+                                    background-image: url("../images/ico/ico-search-rojo.svg");
+                                }
+    
+                            }
+    
+                        }
+
+                        &-lang {
+                            color: $marca-chile-color-black;
+    
+                            &-ico {
+                                background-image: url("../images/ico/ico-lang-negro.svg");
+                            }
+    
+                            &:hover {
+                                color: $marca-chile-color-red;
+    
+                                .marca-chile-header__btn-lang-ico {
+                                    background-image: url("../images/ico/ico-lang-rojo.svg");
+                                }
+    
+                            }
+    
+                        }
+
+                        &-portal {
+                            color: $marca-chile-color-black;
+    
+                            &:hover {
+                                color: $marca-chile-color-red;
+                            }
+    
+                            &.active {
+                                color: $marca-chile-color-red;
+                            }
+
+                        }
+
+                    } 
+
+                }
+                
+            }
+
+        }
+
+        //header interior (modificaciones)
+        &.marca-chile-header__interior {
+
+            .navbar {
+                background-color: $marca-chile-color-white;
+            }
+    
+            .marca-chile-header__home {
+
+                &-submenu {
+    
+                    .navbar-toggler {
+    
+                        &-icon {
+                            width: 2.3rem;
+                            height: 2.2rem;
+                            background-image: url("../images/ico/ico-toggle-negro.svg");
+                            transition: all ease .4s;
+                        }
+        
+                        &:hover {
+        
+                            .navbar-toggler-icon {
+                                background-image: url("../images/ico/ico-toggle-rojo.svg");
+                                transition: all ease .4s;
+                            }
+        
+                        }
+        
+        
+        
+                    }
+        
+                    .navbar-brand {
+                        &-logo {
+                            background-image: url("../images/logo/ico-logo-color.svg");
+                        }
+                    }
+
+                }
+    
+                &-links {
+                    .navbar-nav {
+                        flex-direction: row;
+
+                        li {
+                            a {
+                                font-family: $font-family-primary;
+                                font-size: 1.6rem;
+                                color: $marca-chile-color-black;
+                                padding-right: 1rem;
+                                padding-left: 1rem;
+                                transition: all ease .4s;
+
+                                strong {
+                                    font-family: $font-family-primary-bold;
+                                }
+
+                                &:hover {
+                                    color: $marca-chile-color-red;
+                                    transition: all ease .4s;
+                                }
+
+                                &.active {
+                                    color: $marca-chile-color-red;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-btn {
+                    &-search {
+
+                        &-ico {
+                            background-image: url("../images/ico/ico-search-negro.svg");
+                            transition: all ease .4s;
+                        }
+
+                        &:hover {
+
+                            .marca-chile-header__btn-search-ico {
+                                background-image: url("../images/ico/ico-search-rojo.svg");
+                                transition: all ease .4s;
+                            }
+
+                        }
+
+                    }
+
+                    &-lang {
+                        font-family: $font-family-primary-bold;
+                        color: $marca-chile-color-black;
+
+                        &-ico {
+                            background-image: url("../images/ico/ico-lang-negro.svg");
+                            transition: all ease .4s;
+                        }
+
+                        &:hover {
+                            color: $marca-chile-color-red;
+
+                            .marca-chile-header__btn-lang-ico {
+                                background-image: url("../images/ico/ico-lang-rojo.svg");
+                                transition: all ease .4s;
+                            }
+
+                        }
+
+                    }
+
+                    &-portal {
+                        font-family: $font-family-primary-bold;
+                        color: $marca-chile-color-black;
+                        transition: all ease .4s;
+
+                        &:hover {
+                            color: $marca-chile-color-red;
+                            transition: all ease .4s;
+                        }
+
+                        &.active {
+                            color: $marca-chile-color-red;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    &__mobile {
+        display: none;
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-header {
+        padding: 60px 0px;
+
+        &__home {
+            display: none;
+        }
+
+        &__mobile {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1030;
+
+            .navbar {
+                width: 100%;
+                padding: 0.5rem;
+
+                .marca-chile-header__mobile {
+                    
+                    &-submenu {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+
+                        .navbar-toggler {
+                            border: none;
+                            appearance: none;
+                            margin-right: 3rem;
+
+                            &:focus:not(:focus-visible) {
+                                box-shadow: none;
+                            }
+
+                            &-icon {
+                                width: 2.3rem;
+                                height: 2.2rem;
+                                background-image: url("../images/ico/ico-toggle-blanco.svg");
+                                transition: all ease .4s;
+                            }
+
+                            &:hover {
+
+                                .navbar-toggler-icon {
+                                    background-image: url("../images/ico/ico-toggle-rojo.svg");
+                                    transition: all ease .4s;
+                                }
+
+                            }
+                        }
+
+                        .offcanvas {
+                            width: 638px;
+                            z-index: 9999;
+
+                            &-header {
+                                justify-content: flex-start;
+                                padding: 2rem;
+
+                                .btn-close {
+                                    background-image: url("../images/ico/ico-close-color.svg");
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    width: 18px;
+                                    height: 18px;
+                                    opacity: 1;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+
+                                .marca-chile-header__mobile-btn-portal {
+                                    text-align: center;
+                                    width: 100%;
+                                    margin-right: 1.8rem;
+
+                                    a {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        text-decoration: none;
+                                        text-decoration: none;
+                                        width: 180px;
+                                        height: 42px;
+                                        color: $marca-chile-color-white;
+                                        background-color: $marca-chile-color-red;
+                                        border-radius: 0.5rem;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+
+                            &-body {
+                                padding: 2rem;
+
+                                .navbar-nav {
+
+                                    &-links {
+                                        padding-left: 0;
+                                        margin-left: auto;
+                                        margin-bottom: 0.5rem;
+
+                                        li {
+                                            padding: 1rem 0;
+
+                                            a {
+                                                font-family: $font-family-primary;
+                                                font-size: 1.8rem;
+                                                text-align: center;
+                                                width: fit-content;
+                                                color: $marca-chile-color-black;
+                                                padding: 0;
+                                                margin: auto;
+                                                transition: all ease .4s;
+
+                                                &:hover {
+                                                    &::after {
+                                                        display: none;
+                                                    }
+                                                }
+
+                                                &:focus {
+                                                    color: $marca-chile-color-red;
+                                                }
+
+                                                &.active {
+                                                    color: $marca-chile-color-red;
+                                                    transition: all ease .4s;
+
+                                                    &::after {
+                                                        display: none;
+                                                    }
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .navbar-brand {
+                            display: flex;
+
+                            &-logo {
+                                background-image: url("../images/logo/ico-logo-blanco.svg");
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                width: 145px;
+                                height: 79px;
+                            }
+                        }
+
+                        .marca-chile-header__mobile-btn {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 0.5rem;
+                            margin-left: auto;
+
+                            // Weglot widget alignment
+                            .weglot-container,
+                            [class*="weglot"] {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            &-search {
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                appearance: none;
+                                background-color: transparent;
+                                border: none;
+                                padding: 0 1rem;
+
+                                &-ico {
+                                    width: 12px;
+                                    height: 12px;
+                                    background-image: url("../images/ico/ico-search-blanco.svg");
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    transition: all ease .4s;
+                                }
+
+                                &:hover {
+
+                                    .marca-chile-header__home-btn-search-ico {
+                                        background-image: url("../images/ico/ico-search-rojo.svg");
+                                        transition: all ease .4s;
+                                    }
+
+                                }
+                            }
+
+                            &-lang {
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                font-size: 2rem;
+                                appearance: none;
+                                color: $marca-chile-color-white;
+                                background-color: transparent;
+                                border: none;
+                                padding: 0 1rem;
+                                transition: all ease .4s;
+
+                                &-ico {
+                                    width: 14px;
+                                    height: 14px;
+                                    background-image: url("../images/ico/ico-lang-blanco.svg");
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    margin-right: 0.5rem;
+                                    transition: all ease .4s;
+                                }
+
+                                &:hover {
+                                    color: $marca-chile-color-red;
+                                    transition: all ease .4s;
+
+                                    .marca-chile-header__home-btn-lang-ico {
+                                        background-image: url("../images/ico/ico-lang-rojo.svg");
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+
+            //header home scroll (modificaciones)
+            &.marca-chile-header__scroll {
+
+                .navbar {
+                    background-color: transparent;
+                    opacity: 0;
+                    transform: translateY(-96px);
+                    transition: all ease .4s;
+        
+                    .marca-chile-header__mobile {
+        
+                        &-submenu {
+            
+                            .navbar-toggler {
+            
+                                &-icon {
+                                    background-image: none;
+                                }
+                
+                                &:hover {
+                
+                                    .navbar-toggler-icon {
+                                        background-image: none;
+                                    }
+                
+                                }
+                
+                            }
+
+                            .offcanvas {
+
+                                &-header {
+
+                                    .marca-chile-header__mobile-btn {
+                    
+                                        &-portal {
+                                            color: transparent;
+                                            transition: none;
+                    
+                                            &:hover {
+                                                color: transparent;   
+                                                transition: none;                    
+                                            }
+                    
+                                            &.active {
+                                                color: transparent; 
+                                                transition: none;                      
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &-body {
+            
+                                    .navbar-nav-links {
+                
+                                        li {
+                                            a {
+                                                color: transparent;
+                                                transition: none;
+                
+                                                strong {
+                                                    font-family: $font-family-primary-bold;
+                                                }
+                
+                                                &:hover {
+                                                    color: $marca-chile-color-red;
+                                                    transition: all ease .4s;
+                                                }
+                
+                                                &.active {
+                                                    color: $marca-chile-color-red;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+
+                            }
+                
+                            .navbar-brand {
+                                &-logo {
+                                    background-image: none;
+                                }
+                            }
+        
+                            .marca-chile-header__mobile-btn {
+
+                                &-search {
+            
+                                    &-ico {
+                                        background-image: none;
+                                    }
+            
+                                    &:hover {
+            
+                                        .marca-chile-header__btn-search-ico {
+                                            background-image: none;
+                                        }
+            
+                                    }
+            
+                                }
+            
+                                &-lang {
+                                    color: transparent;
+                                    transition: none;
+            
+                                    &-ico {
+                                        background-image: none;
+                                    }
+            
+                                    &:hover {
+                                        color: transparent;
+                                        transition: none;
+            
+                                        .marca-chile-header__btn-lang-ico {
+                                            background-image: none;
+                                        }
+            
+                                    }
+            
+                                }
+
+                            }
+        
+                        }
+        
+                    }
+                }
+        
+                &.fixed--show {
+    
+                    .navbar {
+                        background-color: $marca-chile-color-white;
+                        opacity: 1;
+                        transform: initial;
+                        transition: all ease .4s;
+    
+                        .marca-chile-header__mobile {
+        
+                            &-submenu {
+            
+                                .navbar-toggler {
+                
+                                    &-icon {
+                                        background-image: url("../images/ico/ico-toggle-negro.svg");
+                                    }
+                    
+                                    &:hover {
+                    
+                                        .navbar-toggler-icon {
+                                            background-image: url("../images/ico/ico-toggle-rojo.svg");
+                                        }
+                    
+                                    }
+                    
+                                }
+
+                                .offcanvas {
+
+                                    &-body {
+            
+                                        .navbar-nav-links {
+                    
+                                            li {
+
+                                                a {
+                                                    color: $marca-chile-color-black;
+                                                    transition: all ease .4s;
+
+                                                    &:focus {
+                                                        color: $marca-chile-color-red;
+                                                    }
+    
+                                                    &.active {
+                                                        color: $marca-chile-color-red;
+                                                        transition: all ease .4s;
+    
+                                                        &::after {
+                                                            display: none;
+                                                        }
+                                                        
+                                                    }                           
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                }
+        
+                                .navbar-brand {
+                                    &-logo {
+                                        background-image: url("../images/logo/ico-logo-color.svg");
+                                    }
+                                }                     
+            
+                            }    
+        
+                            &-links {
+                                .navbar-nav {
+        
+                                    li {
+                                        a {                                        
+                                            color: $marca-chile-color-black;
+                                        }
+                                    }
+        
+                                }
+                            }  
+        
+                            &-btn {
+        
+                                &-search {
+            
+                                    &-ico {
+                                        background-image: url("../images/ico/ico-search-negro.svg");
+                                    }
+            
+                                    &:hover {
+            
+                                        .marca-chile-header__btn-search-ico {
+                                            background-image: url("../images/ico/ico-search-rojo.svg");
+                                        }
+            
+                                    }
+            
+                                }
+        
+                                &-lang {
+                                    color: $marca-chile-color-black;
+            
+                                    &-ico {
+                                        background-image: url("../images/ico/ico-lang-negro.svg");
+                                    }
+            
+                                    &:hover {
+                                        color: $marca-chile-color-red;
+            
+                                        .marca-chile-header__btn-lang-ico {
+                                            background-image: url("../images/ico/ico-lang-rojo.svg");
+                                        }
+            
+                                    }
+            
+                                }
+        
+                                &-portal {
+                                    color: $marca-chile-color-black;
+            
+                                    &:hover {
+                                        color: $marca-chile-color-red;
+                                    }
+            
+                                    &.active {
+                                        color: $marca-chile-color-red;
+                                    }
+        
+                                }
+        
+                            } 
+        
+                        }
+
+                    }
+                    
+                }
+
+            }
+
+
+            //header interior (modificaciones)
+            &.marca-chile-header__interior {
+
+                .navbar {
+                    background-color: $marca-chile-color-white;
+    
+                    .marca-chile-header__mobile {
+    
+                        &-submenu {
+
+                            .navbar {
+                                background-color: $marca-chile-color-white;
+
+                                &-toggler {
+
+                                    &-icon {
+                                        width: 2.3rem;
+                                        height: 2.2rem;
+                                        background-image: url("../images/ico/ico-toggle-negro.svg");
+                                        transition: all ease .4s;
+                                    }
+
+                                    &:hover {
+
+                                        .navbar-toggler-icon {
+                                            background-image: url("../images/ico/ico-toggle-rojo.svg");
+                                            transition: all ease .4s;
+                                        }
+
+                                    }
+
+                                }
+
+                                &-brand {
+                                    &-logo {
+                                        background-image: url("../images/logo/ico-logo-color.svg");
+                                    }
+                                }
+                            }
+
+                        }
+
+                        &-btn {
+
+                            &-search {
+
+                                &-ico {
+                                    background-image: url("../images/ico/ico-search-negro.svg");
+                                    transition: all ease .4s;
+                                }
+
+                                &:hover {
+
+                                    .marca-chile-header__btn-search-ico {
+                                        background-image: url("../images/ico/ico-search-rojo.svg");
+                                        transition: all ease .4s;
+                                    }
+
+                                }
+
+                            }
+
+                            &-lang {
+                                font-family: $font-family-primary-bold;
+                                color: $marca-chile-color-black;
+
+                                &-ico {
+                                    background-image: url("../images/ico/ico-lang-negro.svg");
+                                    transition: all ease .4s;
+                                }
+
+                                &:hover {
+                                    color: $marca-chile-color-red;
+
+                                    .marca-chile-header__btn-lang-ico {
+                                        background-image: url("../images/ico/ico-lang-rojo.svg");
+                                        transition: all ease .4s;
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// Desktop
+.marca-chile-pagination {
+    position: relative;
+
+    nav {
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10rem;
+
+            .page-item {
+                width: 40px;
+                height: 40px;
+                margin: 1rem;
+
+                .page-link {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    color: $marca-chile-color-grey;
+                    border-radius: 0;
+                    border: 0;
+                    border-bottom: 1px solid $marca-chile-color-light-grey;
+                    height: 100%;
+
+                    &.active {
+                        color: $marca-chile-color-white;
+                        background-color: $marca-chile-color-red;
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Mobile
+// @media screen and (max-width: $md) {
+//     .marca-chile-pagination{
+
+//     }
+// }

@@ -1,0 +1,180 @@
+// Desktop
+.marca-chile-about {
+    padding: 5rem 0;
+
+    &--bg-grey {
+        background-color: $marca-chile-color-beige;
+    }
+
+    &-col {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 15rem;
+
+        h4 {
+            position: relative;
+            text-align: left;
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: -20px;
+                width: 4px;
+                height: 126px;
+                border-left: 4px solid $marca-chile-color-red;
+            }
+        }
+
+        &:nth-child(even) {
+            h4 {
+                text-align: right;
+
+                &:before {
+                    left: auto;
+                    right: -20px;
+                }
+            }
+        }
+
+        p {
+            font-family: $font-family-primary-light;
+            color: $marca-chile-color-light-grey;
+            margin-bottom: 2.5rem;
+
+            &.drop-cap::first-letter {
+                -webkit-initial-letter: 3;
+                initial-letter: 3;
+                color: $marca-chile-color-grey;
+                font-family: $font-family-primary-bold;
+                margin-right: .75em;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                font-family: $font-family-primary-light;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                list-style-type: none;
+            }
+
+            &.red-square {
+                padding-left: 2rem;
+
+                li {
+                    list-style-type: square;
+
+                    &::marker {
+                        color: $marca-chile-color-red;
+                    }
+
+                    a {
+                        font-family: $font-family-primary-light;
+                        color: $marca-chile-color-red;
+                    }
+                }
+
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 5rem;
+        }
+
+    }
+
+    &-blog {
+        &.marca-chile-about {
+            padding: 18rem 0 5rem;
+
+            .marca-chile-about-col {
+                &-quote {
+                    background-color: $marca-chile-color-blue;
+                    padding: 4rem 10rem 4rem 3rem;
+                    margin-bottom: 5rem;
+
+                    p {
+                        color: $marca-chile-color-white;
+                    }
+
+                    span {
+                        position: relative;
+                        font-family: $font-family-primary-light;
+                        font-size: 1.6rem;
+                        color: $marca-chile-color-white;
+                        padding-left: 4rem;
+
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            content: "";
+                            width: 30px;
+                            height: 4px;
+                            background-color: $marca-chile-color-white;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-about {
+        padding: 4rem 0 0;
+
+        &-col {
+            margin-bottom: 4rem;
+
+            h4 {
+                line-height: 3rem;
+                padding-left: 20px;
+    
+                &:before {
+                    left: 0;
+                    height: 80px;
+                }
+            }
+
+            &:nth-child(even) {
+                h4 {
+                    padding-left: 0;
+                    padding-right: 20px;
+    
+                    &:before {
+                        right: 0;
+                    }
+                }
+            }            
+
+            &:last-child {
+                margin-bottom: 4rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &-blog {
+            &.marca-chile-about {
+                padding: 18rem 1rem 5rem;
+
+                .marca-chile-about-col {
+                    &-quote {
+                        padding: 3rem 2rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

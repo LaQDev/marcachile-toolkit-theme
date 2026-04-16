@@ -1,0 +1,62 @@
+// ============================================================
+// main.scss – Marca Chile Toolkit Theme
+// Entry point principal. Compila a /css/main.css
+// ============================================================
+
+
+// ── 1. Abstracts (sin output, solo variables y mixins) ──────
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+// ── 2. Vendors ──────────────────────────────────────────────
+
+@import "vendors/splide.min";
+
+
+// ── 3. Fonts ────────────────────────────────────────────────
+
+@import "fonts/chilena";
+
+
+// ── 4. Base / Global ────────────────────────────────────────
+
+@import "global";
+
+
+// ── 5. Components ───────────────────────────────────────────
+
+@import "components/about";
+@import "components/btn";
+@import "components/card";
+@import "components/cover";
+@import "components/cursor";
+@import "components/dark";
+@import "components/footer";
+@import "components/form";
+@import "components/guia-lectura";
+@import "components/header";
+@import "components/highlights";
+@import "components/image";
+@import "components/made-by-chileans";
+@import "components/modal";
+@import "components/news";
+@import "components/newsletter";
+@import "components/pagination";
+@import "components/pilares-y-propositos";
+@import "components/sticky";
+@import "components/tabs";
+@import "components/toolkit";
+@import "components/new-fix";
+
+
+// ── 6. Page-level ─────────────────────────────────────────
+
+@import "components/home";
+@import "components/internal";
+
+
+// ── 7. Custom Toolkit Overrides ─────────────────────────────
+
+@import "components/custom-toolkit";

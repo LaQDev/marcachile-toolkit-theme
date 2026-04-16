@@ -1,0 +1,107 @@
+// Desktop
+.marca-chile-modal {
+    &-directorio {
+
+        .modal-header {
+            border-bottom: none;
+
+            .btn-close {
+                color: $marca-chile-color-white;
+                background-color: $marca-chile-color-red;
+                opacity: 1;
+                background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
+                background-size: 40%;
+                background-repeat: no-repeat;
+                --bs-btn-close-focus-shadow: none;
+                width: 20px;
+                height: 20px;
+                padding: 1rem 1rem;
+                border: 0;
+                border-radius: 0;
+
+            }
+        }
+
+        .modal-body {
+            padding: 4rem 1rem 6rem;
+        }
+
+        &__col-title {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-content: center;
+            text-align: right;
+            padding: 0 2rem;
+
+            > * {
+                width: 100%;
+            }
+
+            h4 {
+                margin-bottom: 1rem;
+            }
+
+            h6 {
+                font-family: $font-family-primary;
+            }
+        }
+
+        &__col-text {
+            padding: 0 2rem;
+            border-left: 1px solid $marca-chile-color-grey;
+
+            p {
+                font-family: $font-family-primary-light;
+            }
+        }
+    }
+
+    &-searchbar {    
+        .modal-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            border: none;
+            padding: 2rem 18rem;
+
+            .navbar-brand {
+                display: flex;
+
+                &-logo {
+                    background-image: url("../images/logo/ico-logo-color.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 145px;
+                    height: 79px;                    
+                }                
+            }
+
+            .btn-close {
+                background-size: 30px;
+            }
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-modal {
+        &-directorio {
+            &__col-title {
+                justify-content: center;
+                text-align: center;
+            }
+            &__col-text {
+                border-left: none;
+            }
+        }
+
+        &-searchbar {    
+            .modal-header {
+                padding: 2rem 2rem;
+            }
+        }
+    }
+}

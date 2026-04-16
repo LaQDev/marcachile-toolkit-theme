@@ -1,0 +1,32 @@
+// Desktop
+.marca-chile-newsletter {
+    color: $marca-chile-color-white;
+    background-color: $marca-chile-color-blue;
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+
+    h4 {
+        font-family: $font-family-primary-light;
+    }
+
+    h2 {
+        font-size: 4.6rem;
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-newsletter {
+        padding: 3rem 1rem;
+
+        h4 {
+            font-size: 2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        h2 {
+            font-size: 3.6rem;
+            margin-bottom: 3rem;
+        }
+    }
+}

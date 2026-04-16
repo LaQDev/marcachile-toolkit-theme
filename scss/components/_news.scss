@@ -1,0 +1,595 @@
+// Desktop
+.marca-chile-news {
+    &__main {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding-right: 5.7rem;
+
+        picture {
+            display: flex;
+            width: 100%;
+            margin-bottom: 4rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        h6 {
+            margin-bottom: 1.6rem;
+        }
+
+        &-rrss {
+            flex: 0 1 0;
+            padding: 0 1.6rem;
+
+            &-nav {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 0;
+                margin-bottom: 0;
+
+                li {
+                    width: 42px;
+                    list-style-type: none;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0 0 2rem;
+
+                    a {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+
+        &-text {
+            flex: 1 0 0;
+            padding-left: 3rem;
+        }
+
+        p {
+            font-family: $font-family-primary-light;
+            margin-bottom: 3.5rem;
+        }
+
+        &-block {
+            h6 {
+                font-size: 1.6rem;
+            }
+
+            &-quote {
+                display: flex;
+                flex-direction: row;
+                background-color: $marca-chile-color-light-2;
+                border: none;
+                border-left: 5px solid $marca-chile-color-red;
+                border-radius: 0;
+                padding: 3rem 3.4rem 3.5rem 6.5rem;
+                margin-bottom: 4rem;
+
+                p {
+                    font-family: $font-family-primary;
+                    font-size: 1.8rem;
+                    line-height: 3rem;
+                    color: $marca-chile-color-red;
+                    margin-bottom: 0;
+
+                    &:first-child {
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: -4px;
+                            left: -44px;
+                            width: 28px;
+                            height: 24px;
+                            background-image: url(../images/ico/ico-quote-red.svg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        &-read-more {
+            border-top: 1px solid $marca-chile-color-white-2;
+            border-bottom: 1px solid $marca-chile-color-white-2;
+            padding: 2rem 0;
+            margin-bottom: 4rem;
+
+            h6 {
+                font-size: 1.6rem;
+            }
+
+            .marca-chile-card-thumbnail {
+                display: flex;
+                flex-direction: row;
+                background-color: $marca-chile-color-beige;
+                border: none;
+                border-left: 5px solid $marca-chile-color-red;
+                border-radius: 0;
+                margin-bottom: 0;
+
+                picture {
+                    flex: 0 0 auto;
+                    width: 33.33333333%;
+                    overflow: hidden;
+                    margin-bottom: 0;
+
+                    img {
+                        width: auto;
+                    }
+                }
+
+                .card-body {
+                    flex: 0 0 auto;
+                    width: 66.66666667%;
+                    height: 100%;
+                    padding: 1.8rem 1.2rem;
+
+                    p {
+                        font-family: $font-family-primary-light;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &-tags {
+            border-top: 1px solid $marca-chile-color-white-2;
+            border-bottom: 1px solid $marca-chile-color-white-2;
+            padding: 2rem 0;
+            margin-bottom: 4rem;
+
+            h6 {
+                font-size: 1.6rem;
+            }
+
+            &-nav {
+                display: inline-flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                padding-left: 0;
+
+                li {
+                    margin: 0 2rem 0 0;
+
+                    a {
+                        color: $marca-chile-color-blue;
+                        text-decoration: none;
+                        background-color: $marca-chile-color-light-2;
+                        border-radius: 100px;
+                        padding: .2rem 1.2rem .2rem 1.2rem;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        &-resultado {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            width: 100%;
+            color: $marca-chile-color-black;
+            padding: 0 0 2rem;
+
+            &__title {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+
+                h6 {
+                    margin-bottom: 1rem;
+
+                    span {
+                        font-family: $font-family-primary-bold;
+                        color: $marca-chile-color-red;
+                    }
+                }
+
+                p {
+                    font-family: $font-family-primary-light;
+                    color: $marca-chile-color-light-grey;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            picture {
+                margin-bottom: 2rem;
+            }
+
+            h4 {
+                font-family: $font-family-primary;
+                font-size: 1.4rem;
+                color: $marca-chile-color-red;
+                margin-bottom: 1.2rem;
+
+                span {
+                    font-family: $font-family-primary-light;
+                    color: $marca-chile-color-light-grey;
+                }
+            }
+
+            p {
+                font-family: $font-family-primary;
+                color: $marca-chile-color-grey;
+                margin-bottom: 2rem;
+            }
+
+            &:nth-last-child(2) {
+                margin-bottom: 4rem;
+            }
+
+        }
+
+        &__blog {
+            &.marca-chile-news__main {
+                margin-right: auto;
+                margin-left: auto;
+
+                .marca-chile-news__main-text {
+                    padding-left: 0;
+
+                    .marca-chile-news__main-link-rrss {
+                        border: none;
+                        padding: 2rem 0;
+                        margin-bottom: 4rem;
+
+                        h6 {
+                            font-size: 1.6rem;
+                            margin-bottom: 1.6rem;
+                        }
+
+                        &-nav {
+                            display: flex;
+                            padding: 0;
+                            margin-bottom: 0;
+
+                            li {
+                                width: 3.5rem;
+                                list-style-type: none;
+                                text-align: center;
+                                border-radius: 100%;
+                                margin: 0 .75rem;
+
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+
+                                a {
+                                    img {
+                                        width: 100%;
+                                        border-radius: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .marca-chile-news__main-opinion {
+                        text-align: center;
+                        border: none;
+                        padding: 2rem 0;
+                        margin-bottom: 6rem;
+
+                        h6 {
+                            font-size: 1.6rem;
+                            margin-bottom: 3rem;
+                        }
+
+                        &-nav {
+                            display: flex;
+                            justify-content: center;
+                            padding: 0;
+                            margin-bottom: 0;
+
+                            li {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 8rem;
+                                height: 8rem;
+                                list-style-type: none;
+                                text-align: center;
+                                border: 1px solid $marca-chile-color-blue;
+                                margin: 0 .75rem;
+
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+
+                                a {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-family: $font-family-primary-bold;
+                                    text-decoration: none;
+                                    height: 100%;
+                                    width: 100%;
+                                    color: $marca-chile-color-blue;
+
+                                    img {
+                                        width: 100%;
+                                        border-radius: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .marca-chile-news__main-tags {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+    }
+
+    &__sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        height: fit-content;
+        padding-left: 5.7rem;
+        border-left: 2px solid $marca-chile-color-white-2;
+
+        >* {
+            width: 100%;
+        }
+
+        h6 {
+            margin-bottom: 2.4rem;
+        }
+
+        picture {
+            display: flex;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .card {
+            height: auto;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $marca-chile-color-white-2;
+            padding: 2.4rem 0 2rem;
+
+            &-header {
+                font-family: Chilena Light;
+                font-size: 1.4rem;
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                padding: 0;
+                margin: 0;
+
+                span {
+                    color: $marca-chile-color-red;
+                }
+            }
+
+            &-body {
+                padding: 0;
+                margin: 0;
+
+                p {
+                    color: $marca-chile-color-grey;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &-resultado {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &.marca-chile-news__sidebar {
+                margin-right: auto;
+
+                h6 {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &.marca-chile-news__main {
+                margin-left: auto;
+
+                h6 {
+                    font-size: 1.8rem;
+                }
+
+                &-tags {
+                    border: 0;
+                    margin-bottom: 2rem;
+
+                    .marca-chile-news__main-tags-nav {
+                        margin-bottom: 0;
+
+                        li {
+                            margin: 0 2rem 2rem 0;
+
+                            a {
+                                font-size: 1.4rem;
+                                color: $marca-chile-color-light-grey;
+                                background-color: transparent;
+                                border-radius: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                &-read-more {
+                    border: none;
+                    margin-bottom: 0;
+
+                    .marca-chile-card-thumbnail {
+                        border-left: 5px solid $marca-chile-color-red;
+                        padding: 0;
+                        margin-bottom: 2rem;
+
+                        picture {
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &.card {
+                padding: 2.4rem 0 2rem 2rem;
+                margin-bottom: 0;
+
+                .card-header {
+                    border: none;
+                    border-radius: 0;
+                    background-color: transparent;
+                    padding: 0;
+                    margin: 0;
+
+                    h6 {
+                        position: relative;
+                        font-family: Chilena Light;
+                        font-size: 1.4rem;
+                        color: $marca-chile-color-light-grey;
+                        margin-bottom: 1rem;
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: -20px;
+                            content: "";
+                            width: 12px;
+                            height: 1px;
+                            background-color: $marca-chile-color-white-2;
+                            margin: auto;
+                        }
+
+                        span {
+                            color: $marca-chile-color-red;
+                        }
+
+                    }
+                }
+
+                .card-body {
+                    padding: 0;
+                    margin: 0;
+
+                    p {
+                        color: $marca-chile-color-grey;
+                    }
+                }
+
+                .card:last-child {
+                    border-bottom: none;
+                }
+            }
+
+        }
+    }
+}
+
+// Mobile
+@media screen and (max-width: $md) {
+    .marca-chile-news {
+        &__main {
+            padding-right: 1rem;
+
+            picture {
+                margin-bottom: 2rem;
+            }
+
+            &-rrss {
+                flex: 0 0 auto;
+                width: 100%;
+                padding: 0 0 3rem;
+
+                &-nav {
+                    justify-content: flex-start;
+                    flex-direction: row;
+
+                    li {
+                        margin: 0 2rem 2rem 0;
+                    }
+                }
+            }
+
+            &-text {
+                flex: 0 0 auto;
+                width: 100%;
+                padding-left: 1rem;
+            }
+
+            &-block {
+                &-quote {
+                    padding: 3rem 4.5rem 3.5rem 6.5rem;
+
+                    p {
+                        font-family: $font-family-primary-bold;
+                        line-height: 2rem;
+                    }
+                }
+            }
+
+            &-tags {
+                &-nav {
+                    li {
+                        margin: 0 1rem 1.5rem 0;
+                    }
+                }
+            }
+
+            &__blog {
+                &.marca-chile-news__main {
+
+                    .marca-chile-news__main-text {
+
+                        .marca-chile-news__main-link-rrss {
+                            padding: 2rem 1rem;
+                        }
+
+                    }
+
+                    .marca-chile-news__main-tags {
+                        margin: 0 1rem 2rem;
+                    }
+                }
+            }
+
+        }
+
+        &__sidebar {
+            padding-left: calc(var(--bs-gutter-x) * .5);
+        }
+    }
+}

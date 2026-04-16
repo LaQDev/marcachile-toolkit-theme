@@ -1,0 +1,33 @@
+// Desktop
+.marca-chile-guia-lectura {
+    background-color: transparent !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+
+    .highlight {
+        top: 286px;
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        background-color: rgba($marca-chile-color-red, 0.25) !important;
+    }
+
+    &.activo {
+        opacity: 1;
+    }
+}
+
+
+
+// Mobile
+// @media screen and (max-width: $md) {
+//     .marca-chile-guia-lectura {}
+// }

@@ -10,15 +10,34 @@ function fix_pagination_on_pages($query) {
 add_action('pre_get_posts', 'fix_pagination_on_pages');
 
 use Aws\S3\S3Client;
-use Aws\Exception\AwsException; 
-use Aws\S3\Exception\S3Exception; 
+use Aws\Exception\AwsException;
+use Aws\S3\Exception\S3Exception;
+
+if ( ! function_exists( 'loadAwsSdk' ) ) {
+    function loadAwsSdk() {
+        if ( class_exists( '\\Aws\\S3\\S3Client' ) ) {
+            return;
+        }
+
+        $plugin_autoload = WP_PLUGIN_DIR . '/admin-toolkit/vendor/autoload.php';
+        if ( file_exists( $plugin_autoload ) ) {
+            require_once $plugin_autoload;
+            return;
+        }
+
+        $theme_autoload = get_template_directory() . '/toolkit/aws/aws-autoloader.php';
+        if ( file_exists( $theme_autoload ) ) {
+            require_once $theme_autoload;
+        }
+    }
+}
 
 // 1. MANEJADOR DE DESCARGAS OPTIMIZADO
 add_action('init', 'toolkit_handle_download');
 function toolkit_handle_download() {
     // Detectamos si viene un POST de descarga del formulario original
     if ( isset($_POST['archivo']) && isset($_POST['my_nonce']) ) {
-        
+
         if ( ! wp_verify_nonce( $_POST['my_nonce'], 'descargar' ) ) {
             wp_die('Enlace caducado.');
         }
@@ -40,7 +59,19 @@ function toolkit_handle_download() {
 
         loadAwsSdk();
 
-        $credentials = include_once($_SERVER['DOCUMENT_ROOT'] . "/toolkit/wp-content/plugins/admin-toolkit/includes/aws-credentials.php");
+        if ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
+            wp_die( 'No se pudo cargar el SDK de AWS. Contacta al administrador del sitio.' );
+        }
+
+        $credentials_file = WP_PLUGIN_DIR . '/admin-toolkit/includes/aws-credentials.php';
+        if ( ! file_exists( $credentials_file ) ) {
+            wp_die( 'No se encontraron las credenciales de AWS. Contacta al administrador del sitio.' );
+        }
+        $credentials = include $credentials_file;
+
+        if ( ! is_array( $credentials ) || empty( $credentials['accessKey'] ) || empty( $credentials['secretKey'] ) ) {
+            wp_die( 'Credenciales de AWS inválidas. Contacta al administrador del sitio.' );
+        }
 
         $s3_bucket = isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] == "prod" ? "cdn.marcachile2.redon.cl" :  "cdn.marcachile2.redon.cl";
 
@@ -54,7 +85,7 @@ function toolkit_handle_download() {
             'use_aws_shared_config_files' => false,
         ]);
 
-        $file_url_end = end(explode("/",$file_url));
+        $file_url_end = basename( $file_url );
 
         $cmd = $s3->getCommand('GetObject', [
             'Bucket' => $s3_bucket,

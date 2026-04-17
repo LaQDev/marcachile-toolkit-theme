@@ -13,25 +13,6 @@ use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 use Aws\S3\Exception\S3Exception;
 
-if ( ! function_exists( 'loadAwsSdk' ) ) {
-    function loadAwsSdk() {
-        if ( class_exists( '\\Aws\\S3\\S3Client' ) ) {
-            return;
-        }
-
-        $plugin_autoload = WP_PLUGIN_DIR . '/admin-toolkit/vendor/autoload.php';
-        if ( file_exists( $plugin_autoload ) ) {
-            require_once $plugin_autoload;
-            return;
-        }
-
-        $theme_autoload = get_template_directory() . '/toolkit/aws/aws-autoloader.php';
-        if ( file_exists( $theme_autoload ) ) {
-            require_once $theme_autoload;
-        }
-    }
-}
-
 // 1. MANEJADOR DE DESCARGAS OPTIMIZADO
 add_action('init', 'toolkit_handle_download');
 function toolkit_handle_download() {
@@ -55,15 +36,24 @@ function toolkit_handle_download() {
             "ruta_archivo"   => $file_url,
         ), array( '%d', '%s', '%s', '%s' ));
 
-        // Construir URL S3
-
-        loadAwsSdk();
+        // Cargar AWS SDK si está disponible (el plugin admin-toolkit normalmente lo provee).
+        if ( function_exists( 'loadAwsSdk' ) ) {
+            loadAwsSdk();
+        } elseif ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
+            $theme_autoload = get_template_directory() . '/toolkit/aws/aws-autoloader.php';
+            if ( file_exists( $theme_autoload ) ) {
+                require_once $theme_autoload;
+            }
+        }
 
         if ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
             wp_die( 'No se pudo cargar el SDK de AWS. Contacta al administrador del sitio.' );
         }
 
-        $credentials_file = WP_PLUGIN_DIR . '/admin-toolkit/includes/aws-credentials.php';
+        $credentials_file = $_SERVER['DOCUMENT_ROOT'] . "/toolkit/wp-content/plugins/admin-toolkit/includes/aws-credentials.php";
+        if ( ! file_exists( $credentials_file ) ) {
+            $credentials_file = WP_PLUGIN_DIR . '/admin-toolkit/includes/aws-credentials.php';
+        }
         if ( ! file_exists( $credentials_file ) ) {
             wp_die( 'No se encontraron las credenciales de AWS. Contacta al administrador del sitio.' );
         }

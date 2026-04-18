@@ -6,33 +6,25 @@ use Aws\Exception\AwsException;
 use Aws\S3\Exception\S3Exception; 
 use Aws\S3\ObjectUploader;
 
-function tk_descarga(){ 
-//is login is a function that will return true or false 
-    //depending if one of the variables is null or not 
+function tk_descarga(){
+//is login is a function that will return true or false
+    //depending if one of the variables is null or not
     if(is_login()==true){
         $permiso=0;
-        
-                
-        #¿autoload?
-        loadAwsSdk();
-                    // returns the server path
-        $pathPlugins = get_template_directory().'/../../plugins';
 
-        # does the pathplugins will only be included once in this path?, if this is the case, why not just a variable? 
-        $credentials = include_once("$pathPlugins/marcachile-toolkit-s3-plugin/includes/aws-credentials.php");
-        
-        #crentials to access to the s3?
-        $s3_credentials = new Aws\Credentials\Credentials($credentials["accessKey"], $credentials["secretKey"]);  
-        
-        $bucket_origin = isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] == "prod" ? "cdn.toolkit.cl" : 'cdn.toolkit.cl';
-        $bucket_upload = isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] == "prod" ? "cdn.toolkit.cl" : 'cdn.toolkit.cl';
-        
-        // creating the client
-        $s3 = new S3Client([
-            'version' => 'latest',
-            'region'  => 'us-east-1',
-            'credentials' => $s3_credentials
-        ]);
+        // El plugin marcachile-toolkit-s3-plugin expone estos helpers con las
+        // credenciales almacenadas en wp_options y el SDK ya cargado.
+        if ( ! function_exists( 'ietk_get_s3_client' ) || ! function_exists( 'ietk_get_s3_bucket' ) ) {
+            wp_die( 'El plugin Admin Toolkit no está disponible. Contacta al administrador del sitio.' );
+        }
+
+        $s3 = ietk_get_s3_client();
+        if ( is_wp_error( $s3 ) ) {
+            wp_die( esc_html( $s3->get_error_message() ) );
+        }
+
+        $bucket_origin = ietk_get_s3_bucket();
+        $bucket_upload = $bucket_origin;
 
         #¿?
         $zip = new ZipArchive();

@@ -36,45 +36,18 @@ function toolkit_handle_download() {
             "ruta_archivo"   => $file_url,
         ), array( '%d', '%s', '%s', '%s' ));
 
-        // Cargar AWS SDK si está disponible (el plugin marcachile-toolkit-s3-plugin normalmente lo provee).
-        if ( function_exists( 'loadAwsSdk' ) ) {
-            loadAwsSdk();
-        } elseif ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
-            $theme_autoload = get_template_directory() . '/toolkit/aws/aws-autoloader.php';
-            if ( file_exists( $theme_autoload ) ) {
-                require_once $theme_autoload;
-            }
+        // El plugin marcachile-toolkit-s3-plugin expone estos helpers con las
+        // credenciales almacenadas en wp_options y el SDK ya cargado.
+        if ( ! function_exists( 'ietk_get_s3_client' ) || ! function_exists( 'ietk_get_s3_bucket' ) ) {
+            wp_die( 'El plugin Admin Toolkit no está disponible. Contacta al administrador del sitio.' );
         }
 
-        if ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
-            wp_die( 'No se pudo cargar el SDK de AWS. Contacta al administrador del sitio.' );
+        $s3 = ietk_get_s3_client();
+        if ( is_wp_error( $s3 ) ) {
+            wp_die( esc_html( $s3->get_error_message() ) );
         }
 
-        $credentials_file = $_SERVER['DOCUMENT_ROOT'] . "/toolkit/wp-content/plugins/marcachile-toolkit-s3-plugin/includes/aws-credentials.php";
-        if ( ! file_exists( $credentials_file ) ) {
-            $credentials_file = WP_PLUGIN_DIR . '/marcachile-toolkit-s3-plugin/includes/aws-credentials.php';
-        }
-        if ( ! file_exists( $credentials_file ) ) {
-            wp_die( 'No se encontraron las credenciales de AWS. Contacta al administrador del sitio.' );
-        }
-        $credentials = include $credentials_file;
-
-        if ( ! is_array( $credentials ) || empty( $credentials['accessKey'] ) || empty( $credentials['secretKey'] ) ) {
-            wp_die( 'Credenciales de AWS inválidas. Contacta al administrador del sitio.' );
-        }
-
-        $s3_bucket = isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] == "prod" ? "cdn.marcachile2.redon.cl" :  "cdn.marcachile2.redon.cl";
-
-        $s3 = new Aws\S3\S3Client([
-            'version' => 'latest',
-            'region'  => 'us-east-1',
-            'credentials' => [
-                'key'    => $credentials["accessKey"],
-                'secret' => $credentials["secretKey"],
-            ],
-            'use_aws_shared_config_files' => false,
-        ]);
-
+        $s3_bucket    = ietk_get_s3_bucket();
         $file_url_end = basename( $file_url );
 
         $cmd = $s3->getCommand('GetObject', [
@@ -420,14 +393,18 @@ add_action('rest_api_init', function () {
 function my_awesome_func($data)
 {
     global $wpdb;
-    include_once(WP_PLUGIN_DIR . '/marcachile-toolkit-s3-plugin/vendor/autoload.php');
+
+    if ( ! function_exists( 'ietk_get_s3_client' ) || ! function_exists( 'ietk_get_s3_bucket' ) ) {
+        return new WP_Error( 'plugin_missing', 'El plugin Admin Toolkit no está disponible.', array( 'status' => 500 ) );
+    }
 
     $id = absint($data["id"]);
     if (!empty($id)) {
-        $credentials = include_once(WP_PLUGIN_DIR . "/marcachile-toolkit-s3-plugin/includes/aws-credentials.php");
-
-        $aws_credentials = new Aws\Credentials\Credentials($credentials["accessKey"], $credentials["secretKey"]);
-        $s3_bucket = isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] == "prod" ? "cdn.marcachile2.redon.cl" : 'cdn.marcachile2.redon.cl';
+        $s3 = ietk_get_s3_client();
+        if ( is_wp_error( $s3 ) ) {
+            return $s3;
+        }
+        $s3_bucket = ietk_get_s3_bucket();
 
         $row = $wpdb->get_row(
             $wpdb->prepare("SELECT * FROM toolkit_archivos_grandes WHERE id = %d", $id)
@@ -442,12 +419,6 @@ function my_awesome_func($data)
         $post_id = $row->post_id;
         $idioma = $row->idioma;
         $medidas = $row->medidas;
-
-        $s3 = new Aws\S3\S3Client([
-            'version' => 'latest',
-            'region' => 'us-east-1',
-            'credentials' => $aws_credentials
-        ]);
 
         $s3->registerStreamWrapper();
 

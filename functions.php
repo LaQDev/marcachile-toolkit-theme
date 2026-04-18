@@ -36,7 +36,7 @@ function toolkit_handle_download() {
             "ruta_archivo"   => $file_url,
         ), array( '%d', '%s', '%s', '%s' ));
 
-        // Cargar AWS SDK si está disponible (el plugin admin-toolkit normalmente lo provee).
+        // Cargar AWS SDK si está disponible (el plugin marcachile-toolkit-s3-plugin normalmente lo provee).
         if ( function_exists( 'loadAwsSdk' ) ) {
             loadAwsSdk();
         } elseif ( ! class_exists( '\\Aws\\S3\\S3Client' ) ) {
@@ -50,9 +50,9 @@ function toolkit_handle_download() {
             wp_die( 'No se pudo cargar el SDK de AWS. Contacta al administrador del sitio.' );
         }
 
-        $credentials_file = $_SERVER['DOCUMENT_ROOT'] . "/toolkit/wp-content/plugins/admin-toolkit/includes/aws-credentials.php";
+        $credentials_file = $_SERVER['DOCUMENT_ROOT'] . "/toolkit/wp-content/plugins/marcachile-toolkit-s3-plugin/includes/aws-credentials.php";
         if ( ! file_exists( $credentials_file ) ) {
-            $credentials_file = WP_PLUGIN_DIR . '/admin-toolkit/includes/aws-credentials.php';
+            $credentials_file = WP_PLUGIN_DIR . '/marcachile-toolkit-s3-plugin/includes/aws-credentials.php';
         }
         if ( ! file_exists( $credentials_file ) ) {
             wp_die( 'No se encontraron las credenciales de AWS. Contacta al administrador del sitio.' );
@@ -420,11 +420,11 @@ add_action('rest_api_init', function () {
 function my_awesome_func($data)
 {
     global $wpdb;
-    include_once(WP_PLUGIN_DIR . '/admin-toolkit/vendor/autoload.php');
+    include_once(WP_PLUGIN_DIR . '/marcachile-toolkit-s3-plugin/vendor/autoload.php');
 
     $id = absint($data["id"]);
     if (!empty($id)) {
-        $credentials = include_once(WP_PLUGIN_DIR . "/admin-toolkit/includes/aws-credentials.php");
+        $credentials = include_once(WP_PLUGIN_DIR . "/marcachile-toolkit-s3-plugin/includes/aws-credentials.php");
 
         $aws_credentials = new Aws\Credentials\Credentials($credentials["accessKey"], $credentials["secretKey"]);
         $s3_bucket = isset($_SERVER['APP_ENV']) && $_SERVER['APP_ENV'] == "prod" ? "cdn.marcachile2.redon.cl" : 'cdn.marcachile2.redon.cl';

@@ -19,7 +19,7 @@ function tk_descarga(){
         $pathPlugins = get_template_directory().'/../../plugins';
 
         # does the pathplugins will only be included once in this path?, if this is the case, why not just a variable? 
-        $credentials = include_once("$pathPlugins/admin-toolkit/includes/aws-credentials.php");
+        $credentials = include_once("$pathPlugins/marcachile-toolkit-s3-plugin/includes/aws-credentials.php");
         
         #crentials to access to the s3?
         $s3_credentials = new Aws\Credentials\Credentials($credentials["accessKey"], $credentials["secretKey"]);  

@@ -4,7 +4,7 @@
 <footer class="mc-footer">
     <div class="container">
         <div class="mc-footer__center">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/2025/logo_marcaChile_blanco.svg"
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo/logo_mc_blanco_outline.svg"
                 alt="Marca Chile" class="mc-footer__logo">
         </div>
 

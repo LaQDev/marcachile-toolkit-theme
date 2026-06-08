@@ -14,6 +14,7 @@ function generateCarousel(className, options) {
 }
 
 jQuery(document).ready(function ($) {
+    const searchErrorColor = getComputedStyle(document.documentElement).getPropertyValue('--mc-rojo-600').trim() || '#E4002B';
 
     // 1. Sidebar Toggle Mobile
     $(document).on("change", ".burger__toggle", function () {
@@ -91,7 +92,7 @@ jQuery(document).ready(function ($) {
         var $input = $(this).find('input[name="s"]');
         if ($input.val().trim().length === 0) {
             e.preventDefault();
-            $input.css('border-color', 'red');
+            $input.css('border-color', searchErrorColor);
         }
     });
     $('input[name="s"]').on('input', function () { $(this).css('border-color', ''); });

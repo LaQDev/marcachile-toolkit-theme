@@ -5,7 +5,7 @@
 </div>
 <div style="padding: 0 30px 30px 30px;border-bottom: 3px solid #eeeeee">
 <div style="padding: 30px 0;font-size: 24px;text-align: center;line-height: 40px">Recientemente cambió la contraseña asociada a su cuenta.</div>
-<div style="padding: 10px 0 50px 0;text-align: center"><a style="background: #ff3333;color: #fff;padding: 12px 30px;text-decoration: none;border-radius: 3px;letter-spacing: 0.3px" href="{user_account_link}">Ir a su cuenta</a></div>
+<div style="padding: 10px 0 50px 0;text-align: center"><a style="background: #E4002B;color: #fff;padding: 12px 30px;text-decoration: none;border-radius: 3px;letter-spacing: 0.3px" href="{user_account_link}">Ir a su cuenta</a></div>
 </div>
 <div style="color: #999;padding: 20px 30px">
 <div>Gracias!</div>

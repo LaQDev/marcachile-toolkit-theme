@@ -67,7 +67,7 @@ $current_slug = $post->post_name; // El slug de la página define la categoría 
                                         </button>
                                     </div>
                                     <div class="search-alert-msg"
-                                        style="display:none; color: #E4032C; font-size: 1.4rem; margin-top: 1rem;">
+                                        style="display:none; color: var(--mc-rojo-600); font-size: 1.4rem; margin-top: 1rem;">
                                     </div>
                                 </div>
                             </form>

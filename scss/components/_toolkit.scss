@@ -714,13 +714,13 @@ body {
                         align-self: stretch;
                         flex: 1;
                         width: 100%;
-                        border-left: 3px solid var(--rojo-500);
-                        background: var(--gris-50);
+                        border-left: 3px solid var(--mc-rojo-600);
+                        background: $color-beige;
                         gap: 6rem;
 
                         p {
                             overflow: hidden;
-                            color: var(--gris-500);
+                            color: $color-grey;
                             text-overflow: ellipsis;
                             font-family: $font-family-primary-bold;
                             font-size: 1.6rem;
@@ -1419,7 +1419,7 @@ body {
             flex-direction: column;
             width: 100%;
             height: 100%;
-            border-right: 3px solid var(--rojo-600);
+            border-right: 3px solid var(--mc-rojo-700);
             padding: $spacing-2xl $spacing-24 $spacing-2xl $spacing-64;
             gap: $spacing-24;
             list-style: none;
@@ -1442,7 +1442,7 @@ body {
                     font-family: $font-family-primary-bold;
                     text-decoration: none;
                     width: 100%;
-                    color: var(--gris-500);
+                    color: $color-grey;
                     transition: color $transition-fast;
 
                     img,
@@ -1456,7 +1456,7 @@ body {
                 }
 
                 &:hover>a {
-                    color: var(--rojo-500);
+                    color: var(--mc-rojo-600);
 
                     img,
                     .menu-icon {
@@ -1466,7 +1466,7 @@ body {
 
                 &.active>a,
                 &.current-menu-item>a {
-                    color: var(--rojo-500);
+                    color: var(--mc-rojo-600);
 
                     img,
                     .menu-icon {
@@ -1493,7 +1493,7 @@ body {
                     font-family: $font-family-primary-bold;
                     text-decoration: none;
                     width: 100%;
-                    color: var(--gris-500);
+                    color: $color-grey;
                     transition: color $transition-fast;
                     margin-bottom: 0.8rem;
 
@@ -1508,7 +1508,7 @@ body {
                 }
 
                 &:hover>a {
-                    color: var(--gris-500);
+                    color: $color-grey;
                     cursor: default;
                 }
             }
@@ -1535,7 +1535,7 @@ body {
                     a {
                         font-family: $font-family-primary-bold;
                         font-size: 1.4rem;
-                        color: var(--gris-500);
+                        color: $color-grey;
                         text-decoration: none;
                         cursor: pointer;
                         padding: 0.4rem 0;
@@ -1543,12 +1543,12 @@ body {
                     }
 
                     &:hover a {
-                        color: var(--rojo-500);
+                        color: var(--mc-rojo-600);
                     }
 
                     &.active a,
                     &.current-menu-item a {
-                        color: var(--rojo-500);
+                        color: var(--mc-rojo-600);
                     }
                 }
             }

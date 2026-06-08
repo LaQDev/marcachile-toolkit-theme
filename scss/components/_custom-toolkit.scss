@@ -177,7 +177,11 @@ a.um-link-alt {
 // ── Header Logo Fix ─────────────────────────────────────────
 
 .marca-chile-header__home .navbar .marca-chile-header__home-submenu .navbar-brand-logo {
-  background-size: auto;
+  background-size: 100%;
+}
+
+.marca-chile-header__home.marca-chile-header__interior .marca-chile-header__home-submenu .navbar-brand-logo {
+  width: 80px;
 }
 
 
@@ -427,7 +431,7 @@ a.um-link-alt {
 
 @include respond-to($bp-md) {
   .navbar-brand-logo {
-    background-size: auto !important;
+    background-size: 100% !important;
   }
 
   .marca-chile-toolkit .marca-chile-filter-wrap {

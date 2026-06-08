@@ -3896,6 +3896,7 @@ body.marca-chile-card-high-contrast .marca-chile-modal-searchbar .modal-dialog *
 
 .marca-chile-header__home.marca-chile-header__interior .marca-chile-header__home-submenu .navbar-brand-logo {
   background-image: url("../images/logo/logo_mc_rojo_filled.svg");
+  width: 80px;
 }
 
 .marca-chile-header__home.marca-chile-header__interior .marca-chile-header__home-links .navbar-nav {
@@ -11500,7 +11501,11 @@ a.um-link-alt {
 }
 
 .marca-chile-header__home .navbar .marca-chile-header__home-submenu .navbar-brand-logo {
-  background-size: auto;
+  background-size: 100%;
+}
+
+.marca-chile-header__home.marca-chile-header__interior .marca-chile-header__home-submenu .navbar-brand-logo {
+  width: 80px;
 }
 
 .marca-chile-toolkit .sidebar-toolkit-mob-container .sidebar-toolkit-mob-toggle {
@@ -11809,7 +11814,7 @@ a.um-link-alt {
 
 @media only screen and (max-width: 768px) {
   .navbar-brand-logo {
-    background-size: auto !important;
+    background-size: 100% !important;
   }
 
   .marca-chile-toolkit .marca-chile-filter-wrap .marca-chile-filter-buttons a {
